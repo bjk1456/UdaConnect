@@ -25,8 +25,9 @@ Vagrant.configure("2") do |config|
       master.vm.network "forwarded_port", guest: p, host: p, protocol: "tcp"
       end
     master.vm.provider "virtualbox" do |v|
-      v.memory = "3072"
+      v.memory = "10144"
       v.name = "master"
+      v.cpus = 2
       end
     master.vm.provision "shell", inline: <<-SHELL
       sudo zypper refresh
