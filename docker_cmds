@@ -1,0 +1,84 @@
+
+
+docker build -t udaconnect-app .
+
+
+docker run -d -p 3000:3000 udaconnect-app
+
+
+
+# tag the image
+docker tag udaconnect-app bjk1456/udaconnect-app:v1.0.0
+
+
+# login into DockerHub
+docker login
+
+# push the image
+docker push bjk1456/udaconnect-app:v1.0.0
+
+
+
+docker build -t udaconnect-api .
+
+
+
+docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.0
+docker push bjk1456/udaconnect-api:v1.0.0
+
+
+
+
+docker build -t udaconnect-persons-api .
+docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.0
+docker push bjk1456/udaconnect-persons-api:v1.0.0
+
+
+
+sudo cat /etc/rancher/k3s/k3s.yaml
+
+docker build -t udaconnect-persons .
+
+
+# tag the image
+docker tag udaconnect-persons bjk1456/nd064-udaconnect-persons:v1.0.0
+
+docker push bjk1456/nd064-udaconnect-persons:v1.0.0
+
+kubectl apply -f deployment/                                                            
+
+
+kubectl get pods
+kubectl get services
+
+
+curl /locations
+
+
+kubectl logs udaconnect-app-7f4cfb7b69-k9pwx
+
+
+
+
+sudo cat /etc/rancher/k3s/k3s.yaml
+
+
+kubectl exec -it udaconnect-api-75596d4596-7wgmt bash
+
+
+
+NAME    TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)     AGE
+mongo   ClusterIP   10.96.41.183   <none>        27017/TCP   11s
+
+# Change mongo-75f59d57f4-4nd6q to the name of the Pod
+kubectl port-forward mongo-75f59d57f4-4nd6q 28015:27017
+
+
+
+
+
+
+So, if you've defined a mapping of 80:80, check that your process inside the docker instance is in fact running on port 80 (netstat -an|grep LISTEN).
+
+
+sudo docker system prune -a

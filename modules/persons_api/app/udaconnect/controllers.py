@@ -60,7 +60,7 @@ class PersonResource(Resource):
         person: Person = PersonService.retrieve(person_id)
         return person
 
-
+                                                                                                                                                                                                                                                                                        
 @api.route("/persons/<person_id>/connection")
 @api.param("start_date", "Lower bound of date range", _in="query")
 @api.param("end_date", "Upper bound of date range", _in="query")
