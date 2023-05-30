@@ -20,11 +20,8 @@ docker push bjk1456/udaconnect-app:v1.0.0
 
 
 docker build -t udaconnect-api .
-
-
-
-docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.0
-docker push bjk1456/udaconnect-api:v1.0.0
+docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.1
+docker push bjk1456/udaconnect-api:v1.0.1
 
 
 
