@@ -31,7 +31,7 @@ spec:
         service: udaconnect-persons-api
     spec:
       containers:
-      - image: bjk1456/udaconnect-persons-api:v1.0.0
+      - image: bjk1456/udaconnect-persons-api:v1.0.2
         name: udaconnect-persons-api
         imagePullPolicy: Always
         env:

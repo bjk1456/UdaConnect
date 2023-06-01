@@ -31,7 +31,7 @@ spec:
         service: udaconnect-api
     spec:
       containers:
-      - image: bjk1456/udaconnect-api:v1.0.1
+      - image: bjk1456/udaconnect-api:v1.0.2
         name: udaconnect-api
         imagePullPolicy: Always
         env:

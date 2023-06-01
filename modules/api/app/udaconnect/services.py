@@ -3,12 +3,16 @@ from datetime import datetime, timedelta
 from typing import Dict, List
 
 from app import db
-from app.udaconnect.models import Connection, Location
+from app.udaconnect.models import Connection, Location,Person
 from app.udaconnect.schemas import ConnectionSchema, LocationSchema
 from geoalchemy2.functions import ST_AsText, ST_Point
 from sqlalchemy.sql import text
+from urllib.request import Request, urlopen
+from urllib.error import URLError, HTTPError
+import json
+import time
 
-logging.basicConfig(level=logging.WARNING)
+logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("udaconnect-api")
 
 
@@ -29,57 +33,75 @@ class ConnectionService:
             Location.creation_time >= start_date
         ).all()
 
-        # Cache all users in memory for quick lookup
-        #TODO replace with a REST call to persons_api's /locations endpoint
-        #person_map: Dict[str, Person] = {person.id: person for person in PersonService.retrieve_all()}
+        
+        req = Request("http://localhost:30002/api/persons")
+        result = []
+        try:
+            response = json.loads(urlopen(req).read())
+            # Cache all users in memory for quick lookup
+            #TODO replace with a REST call to persons_api's /locations endpoint
+            logger.info(f'The response is ${response}')
 
-        # Prepare arguments for queries
-        data = []
-        for location in locations:
-            data.append(
-                {
-                    "person_id": person_id,
-                    "longitude": location.longitude,
-                    "latitude": location.latitude,
-                    "meters": meters,
-                    "start_date": start_date.strftime("%Y-%m-%d"),
-                    "end_date": (end_date + timedelta(days=1)).strftime("%Y-%m-%d"),
-                }
-            )
+            #person_map: Dict[str, Person] = {person.id: person for person in PersonService.retrieve_all()}
+            person_map: Dict[str, Person] = {response['id']: response for response in response}
 
-        query = text(
+            # Prepare arguments for queries
+            data = []
+            for location in locations:
+                data.append(
+                    {
+                        "person_id": person_id,
+                        "longitude": location.longitude,
+                        "latitude": location.latitude,
+                        "meters": meters,
+                        "start_date": start_date.strftime("%Y-%m-%d"),
+                        "end_date": (end_date + timedelta(days=1)).strftime("%Y-%m-%d"),
+                    }
+                )
+
+            query = text(
+                """
+            SELECT  person_id, id, ST_X(coordinate), ST_Y(coordinate), creation_time
+            FROM    location
+            WHERE   ST_DWithin(coordinate::geography,ST_SetSRID(ST_MakePoint(:latitude,:longitude),4326)::geography, :meters)
+            AND     person_id != :person_id
+            AND     TO_DATE(:start_date, 'YYYY-MM-DD') <= creation_time
+            AND     TO_DATE(:end_date, 'YYYY-MM-DD') > creation_time;
             """
-        SELECT  person_id, id, ST_X(coordinate), ST_Y(coordinate), creation_time
-        FROM    location
-        WHERE   ST_DWithin(coordinate::geography,ST_SetSRID(ST_MakePoint(:latitude,:longitude),4326)::geography, :meters)
-        AND     person_id != :person_id
-        AND     TO_DATE(:start_date, 'YYYY-MM-DD') <= creation_time
-        AND     TO_DATE(:end_date, 'YYYY-MM-DD') > creation_time;
-        """
-        )
-        result: List[Connection] = []
-        for line in tuple(data):
-            for (
-                exposed_person_id,
-                location_id,
-                exposed_lat,
-                exposed_long,
-                exposed_time,
-            ) in db.engine.execute(query, **line):
-                location = Location(
-                    id=location_id,
-                    person_id=exposed_person_id,
-                    creation_time=exposed_time,
-                )
-                location.set_wkt_with_coords(exposed_lat, exposed_long)
-
-                result.append(
-                    Connection(
-                        person=person_map[exposed_person_id], location=location,
+            )
+            result: List[Connection] = []
+            for line in tuple(data):
+                for (
+                    exposed_person_id,
+                    location_id,
+                    exposed_lat,
+                    exposed_long,
+                    exposed_time,
+                ) in db.engine.execute(query, **line):
+                    location = Location(
+                        id=location_id,
+                        person_id=exposed_person_id,
+                        creation_time=exposed_time,
                     )
-                )
+                    location.set_wkt_with_coords(exposed_lat, exposed_long)
 
+                    result.append(
+                        Connection(
+                            person=person_map[exposed_person_id], location=location,
+                        )
+                    )
+
+
+        except HTTPError as e:
+        # do something
+            print('Error code: ', e.code)
+        except URLError as e:
+        # do something
+            print('Reason: ', e.reason)
+    
         return result
+
+        
 
 
 class LocationService:
@@ -110,3 +132,7 @@ class LocationService:
         db.session.commit()
 
         return new_location
+    
+    @staticmethod
+    def retrieve_all() -> List[Location]:
+        return db.session.query(Location).all()
