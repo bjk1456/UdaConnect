@@ -1,7 +1,6 @@
 import logging
 from datetime import datetime, timedelta
 from typing import Dict, List
-
 from app import db
 from app.udaconnect.models import Connection, Location,Person
 from app.udaconnect.schemas import ConnectionSchema, LocationSchema
@@ -11,12 +10,23 @@ from urllib.request import Request, urlopen
 from urllib.error import URLError, HTTPError
 import json
 import time
+import requests
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("udaconnect-api")
 
 
 class ConnectionService:
+    @staticmethod
+    def createPerson(person: Dict) -> Person:
+        new_person = Person()
+        new_person.first_name = person["first_name"]
+        new_person.last_name = person["last_name"]
+        new_person.company_name = person["company_name"]
+        new_person.id = person["id"]
+
+        return new_person
+
     @staticmethod
     def find_contacts(person_id: int, start_date: datetime, end_date: datetime, meters=5
     ) -> List[Connection]:
@@ -33,17 +43,39 @@ class ConnectionService:
             Location.creation_time >= start_date
         ).all()
 
-        
-        req = Request("http://localhost:30002/api/persons")
+        #req = Request("http://udaconnect-persons-api.default.svc.cluster.local:5002/api/persons")
+        #response = json.loads(urlopen(req).read())
+        #response_data = json.loads(urlopen(req).read())
+        #logger.info(f'The response is {response_data}')
+        #person_map: Dict[str, Person] = {person.id: person for person in PersonService.retrieve_all()}
+        #person_map: Dict[str, Person] = {person.id: person for person in [ConnectionService.createPerson(r) for r in response_data]}
+
         result = []
         try:
-            response = json.loads(urlopen(req).read())
+            #response = requests.get("http://udaconnect-persons-api.default.svc.cluster.local:5002/api/persons")
+            #response_data = response.json()
+            req = Request("http://udaconnect-persons-api.default.svc.cluster.local:5002/api/persons")
+            response_data = json.loads(urlopen(req).read())
+            logger.info(f'The response is {response_data}')
+            person_map: Dict[str, Person] = {person.id: person for person in [ConnectionService.createPerson(r) for r in response_data]}
+
             # Cache all users in memory for quick lookup
             #TODO replace with a REST call to persons_api's /locations endpoint
-            logger.info(f'The response is ${response}')
+            for r in response_data:
+                logger.info(f'r == {r}')
+                p = ConnectionService.createPerson(r)
+                logger.info(f'p.id = {p.id}')
+                logger.info(f'p.last_name = {p.last_name}')
+
+
+            logger.info(f'The person_map is ${person_map}')
+            for k, v in person_map.items():
+                logger.info(k, ":", v)
+
 
             #person_map: Dict[str, Person] = {person.id: person for person in PersonService.retrieve_all()}
-            person_map: Dict[str, Person] = {response['id']: response for response in response}
+            #person_map: Dict[str, Person] = {person.id: person for person in response_data}
+            #person_map: Dict[str, Person] = {person['id']: person for person in response_data}
 
             # Prepare arguments for queries
             data = []

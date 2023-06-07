@@ -8,14 +8,18 @@ docker run -d -p 3000:3000 udaconnect-app
 
 
 # tag the image
-docker tag udaconnect-app bjk1456/udaconnect-app:v1.0.0
+docker build -t udaconnect-app .
+docker tag udaconnect-app bjk1456/udaconnect-app:v1.0.1
+docker push bjk1456/udaconnect-app:v1.0.1
 
 
 # login into DockerHub
 docker login
 
 # push the image
-docker push bjk1456/udaconnect-app:v1.0.0
+
+
+
 
 
 
@@ -79,3 +83,5 @@ So, if you've defined a mapping of 80:80, check that your process inside the doc
 
 
 sudo docker system prune -a
+
+apk add curl
