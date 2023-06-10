@@ -59,4 +59,4 @@ class Location(db.Model):
 @dataclass
 class Connection:
     location: Location
-    #person: Person
+    person: Person
