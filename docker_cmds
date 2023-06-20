@@ -72,6 +72,7 @@ NAME    TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)     AGE
 mongo   ClusterIP   10.96.41.183   <none>        27017/TCP   11s
 
 # Change mongo-75f59d57f4-4nd6q to the name of the Pod
+
 kubectl port-forward mongo-75f59d57f4-4nd6q 28015:27017
 
 
@@ -85,3 +86,15 @@ So, if you've defined a mapping of 80:80, check that your process inside the doc
 sudo docker system prune -a
 
 apk add curl
+
+
+kubectl exec kafka-broker-7d8795b784-lml7g -- /opt/kafka/bin/kafka-topics.sh --create --topic persons --partitions 1 --bootstrap-server localhost:9092 --replication-factor 1
+
+
+
+
+
+kubectl apply -f zookeeper.yaml
+
+
+kubectl apply -f kafka.yaml
