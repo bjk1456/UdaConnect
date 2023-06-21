@@ -88,7 +88,12 @@ sudo docker system prune -a
 apk add curl
 
 
-kubectl exec kafka-broker-7d8795b784-lml7g -- /opt/kafka/bin/kafka-topics.sh --create --topic persons --partitions 1 --bootstrap-server localhost:9092 --replication-factor 1
+kubectl exec kafka-broker-7f4f7cdc69-wxqdt -- /opt/kafka/bin/kafka-topics.sh --create --topic persons --partitions 1 --bootstrap-server localhost:9092 --replication-factor 1
+
+kubectl exec kafka-broker-7f4f7cdc69-wxqdt -- /opt/kafka/bin/kafka-topics.sh --create --topic locations --partitions 1 --bootstrap-server localhost:9092 --replication-factor 1
+
+
+kubectl port-forward kafka-broker-7d8795b784-lml7g 9092
 
 
 

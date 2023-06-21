@@ -1,32 +1,57 @@
 from kafka import KafkaConsumer
 from kafka import TopicPartition
-import threading
+import csv
 
-TOPIC = 'persons'
+TOPIC_P = 'persons'
+TOPIC_L = 'locations'
 CONSUMER_GROUP = 'udacity'
 PARTITION = 0
 
-consumer = KafkaConsumer(bootstrap_servers=['localhost:9092'],     enable_auto_commit=True,
-    consumer_timeout_ms=1000,
-    auto_offset_reset='earliest')
+consumer = KafkaConsumer(bootstrap_servers=['localhost:9092'], enable_auto_commit=True,
+                        consumer_timeout_ms=1000, auto_offset_reset='earliest')
 
 
+class ConsumerPersons:
+    @staticmethod
+    def get_all_persons():
+        persons_dic_lst = consume(consumer, TOPIC_P)
 
-#consumer.poll()
+        return persons_dic_lst
 
-def consume(consumer, topics):    
-    tp = TopicPartition(TOPIC, 0)
+class ConsumerLocations:
+    @staticmethod
+    def get_all_locations():
+        persons_dic_lst = consume(consumer, TOPIC_L)
+
+        return persons_dic_lst
+
+def consume(consumer, topic):    
+    tp = TopicPartition(topic, 0)
     consumer.assign([tp])
-    #consumer.seek_to_beginning()
-
     consumer.poll()
+    raw_entities = list(consumer)
+    entities_v = [(r.value.decode('UTF-8').strip('\"')) for r in raw_entities]
+    headers = entities_v[0]
+    values = entities_v[1:]
+    entities_dic_lst = []
 
-    # read all messages and keep latest
-    latest_message = list(consumer)
-    for l in latest_message:
-        print(l.value.decode('UTF-8'))
+    for val in values:
+        entities_dict = {}
+        for (v,h) in zip(val.split(", "), headers.split(", ")):
+            entities_dict[h] = v
+        entities_dic_lst.append(entities_dict)
 
-    consumer.close()
+    return entities_dic_lst
+
 
 if __name__ == '__main__':
-    consume(consumer, TOPIC)
+    #persons = ConsumerPersons.get_all_persons()
+    #persons = ConsumerLocations.get_all_locations()
+    for p in persons:
+        print(f'p id is')
+        print(p['id'])
+        print(p.values())
+        print('p.keys == ')
+        print(p.keys())
+ 
+

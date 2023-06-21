@@ -14,8 +14,6 @@ LOCATION_CSV = '../db/location.csv'
 #producer = KafkaProducer(bootstrap_servers=KAFKA_SERVER,value_serializer=lambda v: json.dumps(v).encode('utf-8'))
 producer = KafkaProducer(bootstrap_servers=KAFKA_SERVER)#, group_id=CONSUMER_GROUP)
 
-producer.send(TOPIC_P, b'Test Message!!!')
-producer.flush()
 
 
 def producer(file, topic):
