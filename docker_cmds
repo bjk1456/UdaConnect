@@ -24,15 +24,15 @@ docker login
 
 
 docker build -t udaconnect-api .
-docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.2
-docker push bjk1456/udaconnect-api:v1.0.2
+docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.4
+docker push bjk1456/udaconnect-api:v1.0.4
 
 
 
 
 docker build -t udaconnect-persons-api .
-docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.2
-docker push bjk1456/udaconnect-persons-api:v1.0.2
+docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.4
+docker push bjk1456/udaconnect-persons-api:v1.0.4
 
 
 
@@ -103,3 +103,43 @@ kubectl apply -f zookeeper.yaml
 
 
 kubectl apply -f kafka.yaml
+
+[appuser@kafka-deployment-xxx ~]$ kafka-topics — create — bootstrap-server localhost:29092 — replication-factor 1 — partitions 1 — topic minikube-topicCreated topic minikube-topic.[appuser@kafka-deployment-xxx ~]$ kafka-console-consumer --bootstrap-server localhost:29092 --topic minikube-topic
+
+kubectl cluster-info
+
+
+
+
+
+
+
+
+
+
+helm repo add bitnami ‌https://charts.bitnami.com/bitnami‌
+helm repo update
+
+helm template kafka bitnami/kafka \
+--set volumePermissions.enabled=true \
+--set zookeeper.volumePermissions.enabled=true \
+--set externalAccess.service.type=NodePort \
+> kafka.yaml
+
+
+
+
+
+
+externalAccess.enabled: true
+externalAccess.autoDiscovery.enabled: true
+externalAccess.service.type: NodePort
+
+
+
+
+
+/ # curl http://kafka-service.default.svc.cluster.local:9092
+curl: (52) Empty reply from server
+
+

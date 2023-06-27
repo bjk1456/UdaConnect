@@ -134,8 +134,6 @@ class ConnectionService:
         return result
 
         
-
-
 class LocationService:
     @staticmethod
     def retrieve(location_id) -> Location:
