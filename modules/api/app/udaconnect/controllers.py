@@ -9,6 +9,7 @@ from app.udaconnect.schemas import (
 from app.udaconnect.services import ConnectionService, LocationService
 from app.udaconnect.consumer import ConsumerPersons
 from app.udaconnect.producer import ProducePersons
+from app.udaconnect.consumer_copy import ConsumerLocations
 
 from flask import request
 from flask_accepts import accepts, responds
@@ -41,9 +42,12 @@ class LocationsResource(Resource):
         #logger.info("About to produce persons")
         #ProducePersons.produce_persons()
 
-        locationz: List[Location] = ConsumerPersons.get_all_persons()
+        #locationz: List[Location] = ConsumerPersons.get_all_persons()
+        locationz: List[Location] = ConsumerLocations.get_all_locations()
         for z in locationz:
+            logger.info('The ConsumerLocations are ... ')
             logger.info(z['id'])
+            logger.info(z['longitude'])
         return locations
     
 

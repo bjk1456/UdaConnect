@@ -24,8 +24,8 @@ docker login
 
 
 docker build -t udaconnect-api .
-docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.2
-docker push bjk1456/udaconnect-api:v1.0.2
+docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.4
+docker push bjk1456/udaconnect-api:v1.0.4
 
 
 
@@ -88,7 +88,12 @@ sudo docker system prune -a
 apk add curl
 
 
-kubectl exec kafka-broker-7d8795b784-lml7g -- /opt/kafka/bin/kafka-topics.sh --create --topic persons --partitions 1 --bootstrap-server localhost:9092 --replication-factor 1
+kubectl exec kafka-broker-7f4f7cdc69-wxqdt -- /opt/kafka/bin/kafka-topics.sh --create --topic persons --partitions 1 --bootstrap-server localhost:9092 --replication-factor 1
+
+kubectl exec kafka-broker-7f4f7cdc69-wxqdt -- /opt/kafka/bin/kafka-topics.sh --create --topic locations --partitions 1 --bootstrap-server localhost:9092 --replication-factor 1
+
+
+kubectl port-forward kafka-broker-7d8795b784-lml7g 9092
 
 
 
@@ -98,3 +103,14 @@ kubectl apply -f zookeeper.yaml
 
 
 kubectl apply -f kafka.yaml
+
+[appuser@kafka-deployment-xxx ~]$ kafka-topics — create — bootstrap-server localhost:29092 — replication-factor 1 — partitions 1 — topic minikube-topicCreated topic minikube-topic.[appuser@kafka-deployment-xxx ~]$ kafka-console-consumer --bootstrap-server localhost:29092 --topic minikube-topic
+
+
+
+
+
+/ # curl http://kafka-service.default.svc.cluster.local:9092
+curl: (52) Empty reply from server
+
+

@@ -1,4 +1,5 @@
 from datetime import datetime
+import logging
 
 from app.udaconnect.models import Connection, Location, Person
 from app.udaconnect.schemas import (
@@ -11,10 +12,14 @@ from flask import request
 from flask_accepts import accepts, responds
 from flask_restx import Namespace, Resource
 from typing import Optional, List
+from app.udaconnect.consumer_copy import ConsumerPersons
 
 DATE_FORMAT = "%Y-%m-%d"
 
 api = Namespace("UdaConnect", description="Connections via geolocation.")  # noqa
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("udaconnect-api")
 
 
 # TODO: This needs better exception handling
@@ -55,8 +60,16 @@ class PersonsResource(Resource):
 
     @responds(schema=PersonSchema, many=True)
     def get(self) -> List[Person]:
+        logger.info(" def get(self) -> List[Person]:")
         persons: List[Person] = PersonService.retrieve_all()
-        return persons
+        personz: List[Person] = ConsumerPersons.get_all_persons()
+        #locationz: List[Location] = ConsumerLocations.get_all_locations()
+        for p in personz:
+            logger.info('The Persons are ... ')
+            logger.info(p['first_name'])
+            logger.info(p['id'])
+        #return persons
+        return personz
 
 
 @api.route("/persons/<person_id>")

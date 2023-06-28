@@ -30,19 +30,19 @@ def create_app(env=None):
 
     @app.before_request
     def before_first_request():
-        TOPIC_P = 'persons'
+        #TOPIC_P = 'persons'
         TOPIC_L = 'locations'
         KAFKA_SERVER = 'kafka-headless:9092'
         PARTITION = 0
-        CONSUMER_GROUP = 'udacity'
-        PERSON_CSV = '/app/udaconnect/person.csv'
+        #CONSUMER_GROUP = 'udacity'
+        #PERSON_CSV = '/app/udaconnect/person.csv'
         LOCATION_CSV = '/app/udaconnect/location.csv'
 
         producer = KafkaProducer(bootstrap_servers=KAFKA_SERVER,value_serializer=lambda v: json.dumps(v).encode('utf-8'))
-        with open(PERSON_CSV) as f:
+        with open(LOCATION_CSV) as f:
             for row in f:
                 logger.info(f'the row is {row.strip()}')
-                producer.send(topic=TOPIC_P, value=row.strip(), partition=PARTITION)
+                producer.send(topic=TOPIC_L, value=row.strip(), partition=PARTITION)
             producer.flush()
         producer.close()
 
