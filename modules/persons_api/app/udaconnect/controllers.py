@@ -12,7 +12,7 @@ from flask import request
 from flask_accepts import accepts, responds
 from flask_restx import Namespace, Resource
 from typing import Optional, List
-from app.udaconnect.consumer_copy import ConsumerPersons
+from modules.persons_api.app.udaconnect.consumer import ConsumerPersons
 
 DATE_FORMAT = "%Y-%m-%d"
 
@@ -61,15 +61,14 @@ class PersonsResource(Resource):
     @responds(schema=PersonSchema, many=True)
     def get(self) -> List[Person]:
         logger.info(" def get(self) -> List[Person]:")
-        persons: List[Person] = PersonService.retrieve_all()
-        personz: List[Person] = ConsumerPersons.get_all_persons()
+        persons: List[Person] = ConsumerPersons.get_all_persons()
         #locationz: List[Location] = ConsumerLocations.get_all_locations()
-        for p in personz:
+        for p in persons:
             logger.info('The Persons are ... ')
             logger.info(p['first_name'])
             logger.info(p['id'])
         #return persons
-        return personz
+        return person
 
 
 @api.route("/persons/<person_id>")

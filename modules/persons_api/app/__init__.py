@@ -29,12 +29,9 @@ def create_app(env=None):
     @app.before_request
     def before_request():
         TOPIC_P = 'persons'
-        #TOPIC_L = 'locations'
         KAFKA_SERVER = 'kafka-headless:9092'
         PARTITION = 0
-        #CONSUMER_GROUP = 'udacity'
         PERSON_CSV = '/app/udaconnect/person.csv'
-        #LOCATION_CSV = '/app/udaconnect/location.csv'
 
         producer = KafkaProducer(bootstrap_servers=KAFKA_SERVER,value_serializer=lambda v: json.dumps(v).encode('utf-8'))
         with open(PERSON_CSV) as f:

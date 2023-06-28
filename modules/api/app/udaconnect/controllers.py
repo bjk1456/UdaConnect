@@ -1,5 +1,4 @@
 from datetime import datetime
-import logging
 
 from app.udaconnect.models import Connection, Location
 from app.udaconnect.schemas import (
@@ -7,10 +6,6 @@ from app.udaconnect.schemas import (
     LocationSchema
 )
 from app.udaconnect.services import ConnectionService, LocationService
-from app.udaconnect.consumer import ConsumerPersons
-from app.udaconnect.producer import ProducePersons
-from app.udaconnect.consumer_copy import ConsumerLocations
-
 from flask import request
 from flask_accepts import accepts, responds
 from flask_restx import Namespace, Resource
@@ -19,9 +14,6 @@ from typing import Optional, List
 DATE_FORMAT = "%Y-%m-%d"
 
 api = Namespace("UdaConnect", description="Connections via geolocation.")  # noqa
-
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger("udaconnect-api")
 
 
 # TODO: This needs better exception handling
@@ -32,22 +24,6 @@ class LocationsResource(Resource):
     @responds(schema=LocationSchema, many=True)
     def get(self) -> List[Location]:
         locations: List[Location] = LocationService.retrieve_all()
-        logger.info("Inside API controllers.py ... locations are:")
-        for l in locations:
-            logger.info(l.id)
-        logger.info("|||||||||||||||||||||||||")
-        logger.info("About to get ConsumerPersons.get_all_persons")
-        print("OK")
-
-        #logger.info("About to produce persons")
-        #ProducePersons.produce_persons()
-
-        #locationz: List[Location] = ConsumerPersons.get_all_persons()
-        locationz: List[Location] = ConsumerLocations.get_all_locations()
-        for z in locationz:
-            logger.info('The ConsumerLocations are ... ')
-            logger.info(z['id'])
-            logger.info(z['longitude'])
         return locations
     
 
