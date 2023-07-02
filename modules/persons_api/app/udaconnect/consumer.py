@@ -1,6 +1,6 @@
 from kafka import KafkaConsumer
 from kafka import TopicPartition
-import csv
+from flask import g
 import logging
 
 TOPIC_P = 'persons'
