@@ -38,7 +38,6 @@ class PersonsResource(Resource):
     def get(self) -> List[Person]:
         logger.info(" def get(self) -> List[Person]:")
         persons: List[Person] = ConsumerPersons.get_all_persons()
-        #locationz: List[Location] = ConsumerLocations.get_all_locations()
         for p in persons:
             logger.info('The Persons are ... ')
             logger.info(p['first_name'])

@@ -1,0 +1,2 @@
+﻿	The file architecture_design_before.png shows the architecture in its original state as a monolith. What I noticed from this diagram is that a line could be drawn between the Location and Person resources. I decided to do just that and spun the Person resources off into its own separate microservice called persons_api – as demonstrated in architecture_design_after.png. Within the persons_api I replaced the GET /persons API call that returns all Persons acquired from a Postgres DB with Kafka.  
+
