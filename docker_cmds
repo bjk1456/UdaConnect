@@ -143,3 +143,14 @@ externalAccess.service.type: NodePort
 curl: (52) Empty reply from server
 
 
+python3 -m grpc_tools.protoc -I./ --python_out=./ --grpc_python_out=./ location.proto
+
+
+
+udaconnect-locations-grpc-api
+
+
+docker build -t udaconnect-locations-grpc-api .
+docker tag udaconnect-locations-grpc-api bjk1456/udaconnect-locations-grpc-api:v1.0.0
+docker push bjk1456/udaconnect-locations-grpc-api:v1.0.0
+
