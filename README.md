@@ -18,7 +18,7 @@ To do so, ***you will refactor this application into a microservice architecture
 * [Vagrant](https://www.vagrantup.com/) - Tool for managing virtual deployed environments
 * [VirtualBox](https://www.virtualbox.org/) - Hypervisor allowing you to run multiple operating systems
 * [K3s](https://k3s.io/) - Lightweight distribution of K8s to easily develop against a local cluster
-
+* [Kafka](https://kafka.apache.org/) - an distributed event streaming platform for high-performance data pipelines, streaming analytics, and data integration
 ## Running the app
 The project has been set up such that you should be able to have the project up and running with Kubernetes.
 
@@ -79,9 +79,12 @@ Afterwards, you can test that `kubectl` works by running a command like `kubectl
 1. `kubectl apply -f deployment/db-configmap.yaml` - Set up environment variables for the pods
 2. `kubectl apply -f deployment/db-secret.yaml` - Set up secrets for the pods
 3. `kubectl apply -f deployment/postgres.yaml` - Set up a Postgres database running PostGIS
-4. `kubectl apply -f deployment/udaconnect-api.yaml` - Set up the service and deployment for the API
-5. `kubectl apply -f deployment/udaconnect-app.yaml` - Set up the service and deployment for the web app
-6. `sh scripts/run_db_command.sh <POD_NAME>` - Seed your database against the `postgres` pod. (`kubectl get pods` will give you the `POD_NAME`)
+4. `kubectl apply -f deployment/udaconnect-api-persons.yaml` - Set up the service and deployment for the Persons entity API
+6. `kubectl apply -f deployment/udaconnect-api-locations.yaml` - Set up the service and deployment for the Locations entity API
+7. `kubectl apply -f deployment/udaconnect-api-connections.yaml` - Set up the service and deployment for the Connections entity API
+8. `kubectl apply -f deployment/kafka/kafka.yaml` - Set up the kafka server
+9. `kubectl apply -f deployment/kafka/locations_gRPC_api.yaml` - Set up the gRPC server, writer, and reader
+10. `sh scripts/run_db_command.sh <POD_NAME>` - Seed your database against the `postgres` pod. (`kubectl get pods` will give you the `POD_NAME`)
 
 Manually applying each of the individual `yaml` files is cumbersome but going through each step provides some context on the content of the starter project. In practice, we would have reduced the number of steps by running the command against a directory to apply of the contents: `kubectl apply -f deployment/`.
 
@@ -89,13 +92,14 @@ Note: The first time you run this project, you will need to seed the database wi
 
 ### Verifying it Works
 Once the project is up and running, you should be able to see 3 deployments and 3 services in Kubernetes:
-`kubectl get pods` and `kubectl get services` - should both return `udaconnect-app`, `udaconnect-api`, and `postgres`
+`kubectl get pods` and `kubectl get services` - should both return `udaconnect-api-persons`, `udaconnect-api-locations`, and `daconnect-api-connections`
 
 
 These pages should also load on your web browser:
-* `http://localhost:30001/` - OpenAPI Documentation
-* `http://localhost:30001/api/` - Base path for API
 * `http://localhost:30000/` - Frontend ReactJS Application
+* `http://localhost:30001/locations` - Base path for Locations API
+* `http://localhost:30002/persons/` - Base path for Persons API
+* `http://localhost:30003/persons/<person_id>/connection/` - Path for Connections API
 
 #### Deployment Note
 You may notice the odd port numbers being served to `localhost`. [By default, Kubernetes services are only exposed to one another in an internal network](https://kubernetes.io/docs/concepts/services-networking/service/). This means that `udaconnect-app` and `udaconnect-api` can talk to one another. For us to connect to the cluster as an "outsider", we need to a way to expose these services to `localhost`.
@@ -136,6 +140,15 @@ While the Kubernetes service for `postgres` is running (you can use `kubectl get
 kubectl port-forward svc/postgres 5432:5432
 ```
 This will enable you to connect to the database at `localhost`. You should then be able to connect to `postgresql://localhost:5432/geoconnections`. This is assuming you use the built-in values in the deployment config map.
+
+## Kafka
+The data for the Kafka cluster exists in `loudNativeApplicationArchitecture/UdaConnect/db/person.csv` to load it into the Kafka cluster use the following command,
+`kubectl cp loudNativeApplicationArchitecture/UdaConnect/db/person.csv <pod-name>:<fully-qualified-file-name>`
+
+## gRPC 
+SSH into the gRPC container via `kubectl exec -it <pod-name> /bin/sh`. Start the server via `python main.py`. Start another SSH session into the container.
+Send 2 messages to the server via `python writer.py` . Read the messages via `python getter.py`
+
 ### Software
 To manually connect to the database, you will need software compatible with PostgreSQL.
 * CLI users will find [psql](http://postgresguide.com/utilities/psql.html) to be the industry standard.
