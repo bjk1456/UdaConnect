@@ -31,8 +31,8 @@ docker push bjk1456/udaconnect-api:v1.0.4
 
 
 docker build -t udaconnect-persons-api .
-docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.4
-docker push bjk1456/udaconnect-persons-api:v1.0.4
+docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.5
+docker push bjk1456/udaconnect-persons-api:v1.0.5
 
 
 

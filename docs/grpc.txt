@@ -1,0 +1,2 @@
+SSH into the gRPC container via `kubectl exec -it <pod-name> /bin/sh`. Start the server via `python main.py`. Start another SSH session into the container.
+Send 2 messages to the server via `python writer.py` . Read the messages via `python getter.py`
