@@ -1,0 +1,122 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API for locations",
+    "description": "The locations of conferences and conventions",
+    "version": "latest"
+  },
+  "servers": [
+    {
+      "url": "/"
+    }
+  ],
+  "paths": {
+    "/api/locations": {
+      "get": {
+        "summary": "Retreive all locations",
+        "description": "Retrieve all  locations.",
+        "operationId": "retrieveall",
+        "responses": {
+          "200": {
+            "description": "successful",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/location"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create one location",
+        "description": "Create one location.",
+        "operationId": "create",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/location"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "202": {
+            "description": "Successfully created a location"
+          }
+        }
+      }
+    },
+    "/api/locations/{location_id}": {
+      "get": {
+        "summary": "Retrieve one location",
+        "description": "Retrieve location using a private key",
+        "operationId": "retreive",
+        "parameters": [
+          {
+            "name": "location_id",
+            "in": "path",
+            "description": "primary key of location",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/location"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "location": {
+        "type": "object",
+        "properties": {
+          "person_id": {
+            "type": "integer"
+          },
+          "id": {
+            "type": "integer"
+          },
+          "Creation_time": {
+            "type": "string",
+            "format": "time"
+          },
+          "coordinates": {
+            "$ref": "#/components/schemas/location_coordinates"
+          }
+        }
+      },
+      "location_coordinates": {
+        "type": "object",
+        "properties": {
+          "logatitude": {
+            "type": "string"
+          },
+          "altitude": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
