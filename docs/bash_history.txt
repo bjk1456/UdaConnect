@@ -1,0 +1,3673 @@
+cd
+ls
+ls -lhtr
+echo "$(cat kubectl.sha256)  kubectl" | sha256sum --check
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+kubectl version --client
+pwd
+cd Udacity/
+ls
+ls -lhtr
+cd CloudNativeApplicationArchitecture/
+ls
+cd ../
+vim ~/.kube/config 
+rm ~/.kube/config 
+vim ~/.kube/config 
+free -m
+sudo apt update && sudo apt upgrade -y
+ls
+cp config.py __init__.py routes.py ../services/
+cd ../
+ls
+cd services/
+ls
+mv * ../
+ls
+cd ../
+ls
+cd app/
+ls
+cd udaconnect/
+ls
+cp * ../../services/
+ls
+exit
+ls
+cd ../
+ls
+cd app
+ls
+cp config.py __init__.py routes.py ../services/
+cd udaconnect/
+ls
+cp * ../../services/
+exit
+grep -R flask
+exit
+grep -R person
+exit
+cd ~/Downloads/
+ls
+ls -lhtr
+mv 'Response to NIN-1333LB23JB00000001SSN sources sought request 2023-05-12T15_58_38-04 00.eml' /tmp/tmp
+ls -lhtr
+cd ../
+ls
+ls -lhtr
+mv 'Fw: *' /tmp/tmp/
+mv 'Fw: '* /tmp/tmp/
+ls -lhtr
+mv 'Response to NIN-1333LB23JB00000001SSN sources sought request - "Benjamin Kelly" <Benjamin.Kelly@windsorlake.llc> - 2023-05-12 1558.eml' /tmp/tmp
+mv 'Re: Response to NIN-1333LB23JB00000001SSN sources sought request - "Benjamin Kelly" <Benjamin.Kelly@windsorlake.llc> - 2023-05-13 1200.eml' /tmp/tmp/
+history
+history | grep container
+history | grep docker
+cd /tmp
+git clone https://github.com/udacity/nd064-c2-message-passing-projects-starter.git
+ls -lhtr
+cd nd064-c2-message-passing-projects-starter/
+ls
+cd modules/
+ls
+cd api/
+ls
+sudo docker build -t udaconnect-app .
+sudo docker start -d -p 30000:30000 udaconnect-app
+sudo docker run -d -p 30000:30000 udaconnect-app
+sudo docker ps
+sudo docker rm udaconnect-app
+sudo docker build -t udaconnect-app-1 .
+ls
+ls -la
+exit
+sudo apt install thunderbird
+cd /tmp
+ls
+mkdir tmo
+rmdir tmo
+mkdir tmp
+cd tmp/
+ls
+git remote add origin https://liberty.sgvpm.com/benjamin.kelly/governmentcontracting.git
+git init
+git remote add origin https://liberty.sgvpm.com/benjamin.kelly/governmentcontracting.git
+git branch -M master
+ls
+git add Response\ to\ NIN-1333LB23JB00000001SSN\ sources\ sought\ request\ 2023-05-12T15_58_38-04\ 00.eml 
+ls
+git add *
+git commit -m "Initial emails"
+git push
+git push master
+git push --set-upstream origin master
+git pull
+ls
+git branch -M NIN-1333LB23JB00000001SSN-12May2023
+git pull
+ls
+it branch --set-upstream-to=origin/NIN-1333LB23JB00000001SSN-12May2023
+git branch --set-upstream-to=origin/NIN-1333LB23JB00000001SSN-12May2023
+git status
+git pull
+git config pull.rebase false
+git pull
+ls
+git status
+git pull
+git pull origin NIN-1333LB23JB00000001SSN-12May2023 --allow-unrelated-histories
+git status
+git push
+cd
+ls
+cd Udacity/
+ls
+ls -lhtr
+cd CloudNativeApplicationArchitecture
+ls
+cd UdaConnect/
+ls
+git status
+git diff Vagrantfile
+pwd
+ls
+cd ../
+git status
+ls
+cd UdaConnect/
+ls
+git status
+vim kubectl 
+file kubectl 
+ls
+vim .ignore
+git status
+git add Vagrantfile modules/*
+git status
+git commit -m "Move Person(s)Service out of the monolith and into its own service."
+git push
+history
+ls
+vagrant up
+vagrant destroy
+ls
+cd modules/
+ls
+cd api/
+ls
+cd ../frontend/
+ls
+cd ../
+ls
+cd ../
+ls
+cat .ignore 
+cat .ignore >> .gitignore
+cat .gitignore 
+rm .ignore 
+ls
+cd modules/
+ls
+cd api/
+ls
+vim Dockerfile 
+docker build -t udaconnect-app .
+sudo docker build -t udaconnect-app .
+ls
+ls -lhtr
+file app/
+docker run -d -p 3000:3000 udaconnect-app
+sudo docker run -d -p 3000:3000 udaconnect-app
+sudo status docker 
+docker ps
+sudo docker ps
+sudo docker run -d -p 30000:30000 udaconnect-app
+sudo docker ps
+sudo docker start -d -p 30000:30000 udaconnect-app
+sudo docker run -d -p 3000:3000 udaconnect-app
+sudo docker ps
+sudo docker logs
+sudo docker logs 8056aafb6cda38f65bb54d108b4e1208daf946d1d329341b8833a7a3e32657eb
+docker tag udaconnect-app bjk1456/nd064-udaconnect-app:v1.0.0
+sudo docker tag udaconnect-app bjk1456/nd064-udaconnect-app:v1.0.0
+docker login
+sudo docker login
+docker push bjk1456/nd064-udaconnect-app:v1.0.0
+sudo docker push bjk1456/nd064-udaconnect-app:v1.0.0
+pwd
+ls
+cd ../
+ls
+cd frontend/
+ls
+sudo docker container ls
+ls
+docker build -t udaconnect-app .
+sudo docker build -t udaconnect-app .
+docker tag udaconnect-app bjk1456/nd064-udaconnect-app:v1.0.0
+sudo docker tag udaconnect-app bjk1456/nd064-udaconnect-app:v1.0.0
+docker push bjk1456/nd064-udaconnect-app:v1.0.0
+sudo docker push bjk1456/nd064-udaconnect-app:v1.0.0
+cd ../
+ls
+cd api
+ls
+docker build -t udaconnect-api .
+sudo docker build -t udaconnect-api .
+ls -la
+docker tag udaconnect-api bjk1456/nd064-udaconnect-api:v1.0.0
+sudo docker tag udaconnect-api bjk1456/nd064-udaconnect-api:v1.0.0
+sudo docker push bjk1456/nd064-udaconnect-api:v1.0.0
+ls
+cd ../
+ls
+cd persons_api/
+ls
+docker build -t udaconnect-persons .
+sudo docker build -t udaconnect-persons .
+docker tag udaconnect-persons bjk1456/nd064-udaconnect-persons:v1.0.0
+sudo docker tag udaconnect-persons bjk1456/nd064-udaconnect-persons:v1.0.0
+sudo docker push bjk1456/nd064-persons:v1.0.0
+sudo docker push bjk1456/nd064-udaconnect-persons:v1.0.0
+ls
+cd ../
+ls
+cd frontend/
+docker build -t udaconnect-app .
+sudo docker build -t udaconnect-app .
+docker tag udaconnect-app bjk1456/nd064-udaconnect-app:v1.0.0
+sudo docker tag udaconnect-app bjk1456/nd064-udaconnect-app:v1.0.0
+docker push bjk1456/nd064-udaconnect-app:v1.0.0
+sudo docker push bjk1456/nd064-udaconnect-app:v1.0.0
+cd ../
+ls
+cd ../
+ls
+vagrant up
+vagrant ssh
+ls -la
+vim ~/.kube/config 
+rm ~/.kube/config 
+vim ~/.kube/config 
+rm ~/.kube/cache/
+rm -rf ~/.kube/cache/
+kubectl describe services
+ls
+kubectl apply -f deployment/
+kubectl describe services
+vagrant up
+kubectl describe services
+kubectl get services
+kubectl get pods
+kubectl get services
+kubectl get pods
+kubectl get pod udaconnect-app-57b5cf4575-kghpl
+kubectl logs udaconnect-persons-bd546797d-dd84b
+kubectl logs udaconnect-app-57b5cf4575-kghpl
+kubectl get pods
+kubectl logs udaconnect-api-55d69c59cd-svhl5
+kubectl logs postgres-59ff9bdfdc-prw9t
+vagrant destory
+ls
+vagrant ssh
+vagrant destroy
+ls
+cd modules
+ls
+rm -rf api/
+pwd
+ls
+git diff
+ls
+rm -rf frontend/
+ls
+cd frontend/
+ls
+cd ../
+vagrant destroy
+ls
+cd frontend/
+ls
+docker build -t udaconnect-app .
+sudo docker build -t udaconnect-app .
+docker tag udaconnect-app bjk1456/nd064-udaconnect-app:v1.0.0
+sudo docker tag udaconnect-app bjk1456/nd064-udaconnect-app:v1.0.0
+sudo docker push bjk1456/nd064-udaconnect-app:v1.0.0
+cd ../
+ls
+cd api/
+sudo docker build -t udaconnect-api .
+docker tag udaconnect-api bjk1456/nd064-udaconnect-api:v1.0.0
+sudo docker tag udaconnect-api bjk1456/nd064-udaconnect-api:v1.0.0
+sudo docker push bjk1456/nd064-udaconnect-api:v1.0.0
+cd ../
+ls
+docker up
+cd ../
+ls
+vagrant up
+vagrant destroy
+vagrant up
+vagrant destroy
+vagrant up
+vagrant ssh
+ls
+rm -rf ~/.kube/cache/
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl get services
+ls
+kubectl apply -f deployment/
+kubectl get services
+rm ~/.kube/config 
+kubectl get services
+vagrant status
+exit
+cd ~/.config/protonmail/
+ls
+cd bridge-v3/
+ls
+pwd
+history | grep tag
+history | grep kubectl
+exit
+espeak-ng “Hello Everybody
+sudo apt install espeak-ng
+espeak-ng “Hello Everybody
+espeak-ng “Hello Everybody"
+espeak-ng -s 125 “Hello Everybody” 
+espeak-ng -s 125 “Everybody” 
+exit
+cd /tmp
+ls
+ls -lhtr
+cd nd064-c2-message-passing-projects-starter
+ls
+vagrant up
+vagrant ssh
+vim ~/.kube/config 
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl describe services
+kubectl apply -f deployment/
+kubectl get pods
+kubectl get services
+kubectl get pods
+kubectl get services
+kubectl get pods
+kubectl logs udaconnect-app-7f4cfb7b69-k9pwx
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-rzvqc
+ls
+cd modules
+ls
+cp -R /home/kelbenj/Udacity/CloudNativeApplicationArchitecture/UdaConnect/modules/api
+cp -R api/ /home/kelbenj/Udacity/CloudNativeApplicationArchitecture/UdaConnect/modules/api
+cp -R frontend/ /home/kelbenj/Udacity/CloudNativeApplicationArchitecture/UdaConnect/modules/frontend
+vagrant destroy
+exit
+history
+ls
+cd Udacity/
+ls
+cd CloudNativeApplicationArchitecture/
+ls
+cd UdaConnect/
+ls
+vagrant destroy
+vagrant up
+vagrant ssh
+ls
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl get services
+ls
+kubectl apply -f deployment/
+kubectl get pods
+ps -ef
+vagrant destroy
+cd Udacity/
+ls
+cd CloudNativeApplicationArchitecture/
+ls
+cd UdaConnect/
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl get services
+ls
+kubectl get pods
+kubectl apply -f deployment/
+kubectl get pods
+kubectl get services
+kubectl get pods
+history
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-cm528
+kubectl get pods
+kubectl get services
+ls
+vagrant destroy
+ls
+vim Vagrantfile 
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim Vagrantfile 
+vim ~/.kube/config 
+kubectl get pods
+kubectl apply -f deployment/
+kubectl get pods
+kubectl get persons
+kubectl get services
+kubectl get pods
+kubectl logs udaconnect-app-7f4cfb7b69-k9pwx
+kubectl logs postgres-59ff9bdfdc-jjwjm
+kubectl logs udaconnect-api-75596d4596-fv29j
+kubectl get pods
+kubectl logs udaconnect-api-75596d4596-fv29j
+kubectl get pods
+kubectl logs udaconnect-persons-bd546797d-lhxnr
+kubectl get pods
+ls
+cd deployment/
+ls
+vim postgres.yaml 
+cd ../
+ls
+kubectl get pods
+vagrant destroy
+exit
+exit
+cd /tmp
+ls
+pwd
+ls
+history | grep clone
+git clone https://github.com/udacity/nd064-c2-message-passing-projects-starter.git
+ls
+cd nd064-c2-message-passing-projects-starter/
+ls
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl get services
+kubectl apply -f deployment/
+kubectl get services
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-rzvqc
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-xr2v4
+pwd
+ls
+vagrant destroy
+vagrant up
+exit
+cd Udacity/
+ls
+cd CloudNativeApplicationArchitecture/
+ls
+cd UdaConnect/
+ls
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl apply -f deployment/
+kubectl get pods
+kubectl get service
+kubectl get pods
+kubectl get service
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-m6sl2
+kubectl get pods
+kubectl get service
+kubectl get pods
+history
+kubectl get pods
+curl http://localhost:30001/api/
+curl http://localhost:30001/api/locations
+http://localhost:30001/api/persons
+curl http://localhost:30001/api/persons
+curl http://localhost:50002/api/persons
+kubectl get pods
+kubectl get service
+curl http://localhost:5002/api/persons
+curl http://localhost:30002/api/persons
+kubectl exec -it udaconnect-persons-api bin/sh
+kubectl get pods
+kubectl exec -it udaconnect-persons-api-5f67b6b76b-2djjh bin/sh
+vagrant destroy
+ls
+cd modules/
+ls
+cd persons_api/
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.0
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.0
+cd ../
+ls
+cd ../
+ls
+cd deployment/
+ls
+ls -lhtr
+mv udaconnect-api.yaml../
+mv udaconnect-api.yaml ../
+ls
+cd ../
+ls
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl get service
+kubectl apply -f deployment/
+kubectl get pods
+kubectl logs udaconnect-persons-bd546797d-lhxnr
+kubectl logs udaconnect-app-57b5cf4575-4zw8r
+kubectl get pods
+kubectl delete pod udaconnect-app-57b5cf4575-4zw8r
+ls
+cd deployment/
+
+kubectl apply -f udaconnect-app.yaml
+cd ../
+ls
+kubectl get pods
+curl http://localhost:30002/api/persons
+kubectl exec -it udaconnect-persons-api-5f67b6b76b-h6s8j bin/sh
+curl http://localhost:30001/api/persons
+curl http://localhost:30000/api/persons
+curl http://localhost:30001/api/persons
+vagrant destroy
+vagrant up
+kubectl get pods
+kubectl get services
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl get pods
+ls
+kubectl apply -f deployment/
+kubectl get pods
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl get services
+ls
+mv udaconnect-api.yaml deployment/
+kubectl apply -f deployment/
+kubectl get services
+kubectl get pods
+vagrant destroy
+exit
+ls
+cd modules/
+ls
+cd frontend/
+ls
+sudo docker system prune -a
+ls
+docker build -t udaconnect-app .
+sudo docker build -t udaconnect-app .
+sudo docker tag udaconnect-app bjk1456/udaconnect-app:v1.0.0
+sudo docker push bjk1456/udaconnect-app:v1.0.0
+cd ../../
+ls
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl get services
+ls
+kubectl apply -f deployment/
+kubectl get pods
+vagrant destory
+vagrant destroy
+ls
+grep -R 5000
+cd modules/
+LS
+ls
+cd persons_api/
+ls
+grep -R 5000
+vim wsgi.py 
+exit
+cd Udacity/
+ls
+cd CloudNativeApplicationArchitecture/
+ls
+cd UdaConnect/
+ls
+cd deployment/
+ls
+ls -lhtr
+mv udaconnect-api.yaml ../
+cd ../
+
+vagrant destroy
+vagrant up
+
+rm ~/.kube/config 
+vim wsgi.py 
+vim ~/.kube/config 
+kubectl get services
+ls
+kubectl apply -f deployment/
+kubectl get services
+kubectl get pods
+kubectl port-forward udaconnect-persons-api 5000:5002
+kubectl get pods
+kubectl port-forward udaconnect-persons-api-5f67b6b76b-9p5tz 5000:5002
+kubectl port-forward udaconnect-persons-api-5f67b6b76b-9p5tz 5002:5000
+kubectl port-forward udaconnect-persons-api-5f67b6b76b-9p5tz 5000:5002
+kubectl port-forward udaconnect-persons-api-5f67b6b76b-9p5tz 5000:30002
+kubectl port-forward udaconnect-persons-api-5f67b6b76b-9p5tz 5002:30002
+kubectl delete pod udaconnect-persons-api-5f67b6b76b-9p5tz
+ls
+mv udaconnect-api.yaml deployment/
+cd deployment/
+ls
+kubectl apply -f udaconnect-api-persons.yaml
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-m6sl2
+kubectl get services
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-9bbp4
+cd ../
+l
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-9bbp4
+kubectl get pods
+kubectl delete pod udaconnect-persons-api-5f67b6b76b-nbr6r
+kubectl get pods
+ls
+cd deployment/
+ls
+kubectl apply -f udaconnect-api-persons.yaml
+kubectl get services
+ls
+kubectl apply -f udaconnect-api.yaml 
+kubectl get services
+kubectl get pods
+kubectl delete pod udaconnect-api-75596d4596-r722j
+kubectl get pods
+kubectl get services
+kubectl delete svc udaconnect-api
+kubectl get pods
+kubectl delete pod udaconnect-api-75596d4596-k9kxj
+kubectl get pods
+cd ../
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl get services
+ls
+kubectl apply -f deployment/
+kubectl get pods
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl get services
+ls
+kubectl apply -f deployment/
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-9bbp4
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-dvcq6
+git status
+ls
+git add *
+git status
+git commit -m "Break persons-api out into its own service"
+git push
+vagrant destroy
+ls
+cd modules/
+ls
+cd api/
+grep -R person
+grep -Rn person
+ls
+cd ../
+ls
+cd persons_api/
+git status
+git diff
+cd ../
+ls
+git reset --hard 5d9645161870b9ed19eecb6604ea343cd6cda115
+git status
+ls
+git status
+ls
+cd api/
+ls
+docker build -t udaconnect-api .
+sudo docker build -t udaconnect-api .
+docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.1
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.1
+sudo docker push bjk1456/udaconnect-api:v1.0.1
+cd ../
+ls
+cd ../
+ls
+vagrant destroy
+ls
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl get services
+ls
+kubectl apply -f deployment/
+kubectl get pods
+kubectl logs udaconnect-app-57b5cf4575-4zw8r
+kubectl logs udaconnect-api-7578699f58-6xbvf
+ls
+cd modules/
+ls
+cd api/
+ls
+docker build -t udaconnect-persons-api .
+sudo docker build -t udaconnect-persons-api .
+docker build -t udaconnect-api .
+sudo docker build -t udaconnect-api .
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.1
+sudo docker push bjk1456/udaconnect-api:v1.0.1
+cd ../../
+
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl get services
+ls
+kubectl apply -f deployment/
+kubectl get pods
+kubectl logs udaconnect-api-7578699f58-6xbvf
+kubectl logs udaconnect-api-7578699f58-jb5vk
+ls
+vagrant destroy
+ls
+cd modules/
+ls
+cd api/
+sudo docker build -t udaconnect-api .
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.1
+sudo docker push bjk1456/udaconnect-api:v1.0.1
+cd ../
+ls
+cd ../
+ls
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+ls
+kubectl apply -f deployment/
+kubectl get pods
+kubectl logs udaconnect-api-7578699f58-jb5vk
+kubectl logs udaconnect-api-7578699f58-9n4vg
+ls
+cd modules/
+ls
+cd api/
+ls
+grep -Ri Person
+ls
+cd ../
+ls
+cd api
+sudo docker build -t udaconnect-api .
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.1
+sudo docker push bjk1456/udaconnect-api:v1.0.1
+cd ../../
+ls
+vagrant up
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl get services
+kubectl apply -f deployment/
+kubectl get pods
+history | grep curl
+curl http://localhost:30000/api/persons
+curl http://localhost:30001/api/persons
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-dvcq6
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-gm77p
+kubectl get pods
+curl http://localhost:30001/api/persons
+curl http://localhost:30002/api/persons
+curl http://localhost:30001/api/locations
+curl http://localhost:30002/api/locations
+kubectl get pods
+kubectl logs udaconnect-api-7578699f58-m47g9
+kubectl get pods
+kubectl logs udaconnect-persons-api-5f67b6b76b-m6ncv
+vagrant destroy
+git status
+git add *
+git status
+git commit -m "Remove Person from API monolith"
+git push
+cd ~/Downloads/
+ls
+ls -lhtr
+mv 'Response to PCCA-23-00040 sources sought request 2023-05-29T14_50_24-04 00.eml' /tmp/governmentcontracting/
+mv 'Fw RE Response to PCCA-23-00040 sources sought request 2023-05-30T09_31_22-04 00.eml' /tmp/governmentcontracting/
+ls -lhtr
+cd /tmp
+history | grep checkout
+history | grep liberty
+git checkout https://liberty.sgvpm.com/benjamin.kelly/governmentcontracting.git
+git init
+git checkout https://liberty.sgvpm.com/benjamin.kelly/governmentcontracting.git
+git clone https://liberty.sgvpm.com/benjamin.kelly/governmentcontracting.git
+git checkout PCCA-23-00040-29May2023
+git checkout
+ls
+git brach -a
+git branch -a
+ls -lhtr
+cd governmentcontracting/
+ls
+git checkout PCCA-23-00040-29May2023
+ls
+git add *
+git status
+git commit -m "Initial emails"
+git push origin PCCA-23-00040-29May2023 8e8daa3
+git push origin PCCA-23-00040-29May2023
+curl http://localhost:30001/api/persons
+curl http://localhost:30002/api/persons
+curl http://localhost:30003/api/persons
+curl http://localhost:30000/api/persons
+curl http://localhost:30002/api/persons
+curl http://localhost:30003/api/persons
+kubectl get pods
+kubectl get services
+curl http://localhost:30003/api/persons
+curl http://localhost:30002/api/persons
+curl http://localhost:30002/
+kubectl get services
+kubectl get pods
+kubectl exec -it udaconnect-persons-api-5f67b6b76b-9p5tz /bin/sh
+curl http://localhost:30002/
+curl http://localhost:30001
+curl http://localhost:30000
+curl http://localhost:30002/
+curl http://localhost:30002/api/persons
+kubectl get services
+curl http://localhost:30002/health
+kubectl get services
+history
+kubectl get services
+curl http://localhost:30002/health
+curl http://localhost:30001/health
+curl http://localhost:30002/api/persons
+curl http://localhost:30001/api/persons
+grep -R 30001
+curl http://localhost:30002/api/persons
+curl http://localhost:30001/api/persons
+curl http://localhost:30002/api/persons
+curl http://localhost:30001/api/persons
+ls
+cd modules/
+LS
+ls
+cd api/
+ls
+docker build -t udaconnect-api .
+sudo docker build -t udaconnect-api .
+docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.0
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.0
+sudo docker push bjk1456/udaconnect-api:v1.0.0
+curl http://localhost:30001/api/persons
+curl http://localhost:30002/api/persons
+exit
+cd Udacity/
+ls
+cd CloudNativeApplicationArchitecture/
+ls
+cd UdaConnect/
+ls
+cd modules/
+ls
+cd persons_api/
+ls
+docker build -t udaconnect-persons-api .
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.2
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.2
+cd ../
+ls
+vagant destroy
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl get services
+ls
+cd ../
+ls
+kubectl apply -f deployment/
+kubectl get pods
+kubectl logs udaconnect-persons-api-844664c9d8-7x9z4
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-2bdnm
+kubectl get pods
+kubectl logs udaconnect-persons-api-844664c9d8-7x9z4
+vagrant destroy
+ls
+cd modules/
+ls
+cd persons_api/
+ls
+history
+docker build -t udaconnect-persons-api .
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.2
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.2
+cd ../
+ls
+cd ../
+ls
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl get services
+kubectl apply -f deployment/
+kubectl get pods
+kubectl apply -f deployment/
+vagrant destroy 
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+ls
+kubectl apply -f deployment/
+kubectl get pods
+kubectl logs udaconnect-persons-api-844664c9d8-7x9z4
+kubectl logs udaconnect-persons-api-844664c9d8-xxcc6
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-x7m5w
+kubectl get pods
+kubectl logs udaconnect-persons-api-844664c9d8-xxcc6
+vagrant destroy
+ls
+cd modules/
+ls
+cd persons_api/
+ls
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.2
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.2
+cd ../../
+ls
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl get services
+kubectl apply -f deployment/
+kubectl get pods
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+ls
+kubectl apply -f deployment/
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-9hlt4
+vagrant destroy
+grep -R TODO
+grep -Rn TODO
+grep -Rn localhost
+grep -Rni todo 
+ls
+cd modules/
+ls
+cd api/
+ls
+sudo docker build -t udaconnect-api .
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.2
+sudo docker push bjk1456/udaconnect-api:v1.0.2
+cd ../
+ls
+cd ../
+ls
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl get services
+kubectl apply -f deployment/
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-tg9vk
+kubectl get pods
+kubectl logs udaconnect-persons-api-844664c9d8-xxcc6
+kubectl logs udaconnect-persons-api-844664c9d8-rxwm2
+kubectl logs udaconnect-api-7578699f58-rt57b
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl apply -f deployment/
+kubectl get pods
+kubectl logs udaconnect-api-7578699f58-rt57b
+kubectl logs udaconnect-api-75d74bf777-lx29f
+vagrant destroy
+ls
+cd modules/
+ls
+cd api/
+ls
+sudo docker build -t udaconnect-api .
+docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.2
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.2
+sudo docker push bjk1456/udaconnect-api:v1.0.2
+cd ../../
+ls
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl apply -f deployment/
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-tg9vk
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-jqtcm
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-jqtcm
+kubectl get pods
+kubectl logs udaconnect-api-75d74bf777-lx29f
+kubectl logs udaconnect-app-d5c6dd9b6-gsz46
+kubectl exec -it udaconnect-app-d5c6dd9b6-gsz46 /bin/sh
+kubectl logs udaconnect-app-d5c6dd9b6-gsz46
+kubectl get pods
+kubectl logs udaconnect-api-75d74bf777-6mtcj
+curl -X GET "http://localhost:30002/api/persons" -H "accept: application/json"
+curl "http://localhost:30002/api/persons"
+vim hello.py
+python hello.py 
+python3 hello.py 
+python hello.py 
+vim hello.py
+python3 hello.py 
+vim hello.py
+python3 hello.py 
+vim hello.py
+python3 hello.py 
+vim hello.py
+python3 hello.py 
+vim hello.py
+python3 hello.py 
+vim hello.py
+python3 hello.py 
+vim hello.py
+python3 hello.py 
+vim hello.py
+python3 hello.py 
+vagrant destroy
+vim hello.py
+python3 hello.py 
+vim hello.py
+python3 hello.py 
+vim hello.py
+python3 hello.py 
+vim hello.py
+python3 hello.py 
+vim hello.py
+python3 hello.py 
+vim hello.py
+python3 hello.py 
+curl http://localhost:30002/api/persons
+vagrant destroy
+ls
+cd modules/
+
+cd api/
+ls
+sudo docker build -t udaconnect-api .
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.2
+sudo docker push bjk1456/udaconnect-api:v1.0.2
+cd ../
+
+cd ../
+ls
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim hello.py
+vim ~/.kube/config 
+kubectl get services
+kubectl apply -f deployment/
+kubectl get pods
+kubectl logs udaconnect-api-75d74bf777-6mtcj
+kubectl logs postgres-59ff9bdfdc-qd649
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-jqtcm
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-qd649
+kubectl get pods
+kubectl logs udaconnect-api-75d74bf777-vt75l
+vagrant destroy
+ls
+cd modules/
+ls
+cd api/
+sudo docker build -t udaconnect-api .
+docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.2
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.2
+sudo docker push bjk1456/udaconnect-api:v1.0.2
+cd ../../
+ls
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl apply -f deployment/
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-qwdl9
+kubectl get pods
+kubectl logs udaconnect-api-75d74bf777-ssdkh
+vagrant destroy
+ls
+vim hello.py 
+ls
+cd modules/
+ls
+cd api/
+ls
+sudo docker build -t udaconnect-api .
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.2
+sudo docker push bjk1456/udaconnect-api:v1.0.2
+cd ../../
+ls
+vagrant up
+vagrant ssh
+ls
+rm ~/.kube/config 
+vim hello.py 
+vim ~/.kube/config 
+ls
+kubectl apply -f deployment/
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-mk8q8
+ls
+kubectl logs udaconnect-api-75d74bf777-ssdkh
+kubectl get pods
+kubectl logs udaconnect-api-75d74bf777-w6xt2
+docker destroy
+vagrant destroy
+ls
+cd modules/
+ls
+cd api/
+ls
+sudo docker build -t udaconnect-api .
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.2
+sudo docker push bjk1456/udaconnect-api:v1.0.2
+cd ../../
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl apply -f deployment/
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-bbh2s
+kubectl get pods
+kubectl logs udaconnect-app-d5c6dd9b6-rlc4l
+kubectl logs udaconnect-api-75d74bf777-dtfqq
+vagrant destroy
+ls
+cd modules/
+ls
+cd api/
+sudo docker build -t udaconnect-api .
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.2
+sudo docker push bjk1456/udaconnect-api:v1.0.2
+cd ../../
+ls
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl apply -f deployment/
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-z2hfc
+kubectl get pods
+kubectl logs udaconnect-api-75d74bf777-dtfqq
+kubectl logs udaconnect-api-75d74bf777-dkfmx
+kubectl exec -it udaconnect-api-75d74bf777-dkfmx /bin/sh
+kubectl get pods
+kubectl logs udaconnect-api-75d74bf777-q4bzj
+kubectl get pods
+kubectl exec -it udaconnect-api-75d74bf777-q4bzj /bin/sh
+kubectl get pods
+kubectl logs udaconnect-api-75d74bf777-q4bzj
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl apply -f deployment/od
+kubectl apply -f deployment/
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-jwksn
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-jwksn
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-jwksn
+kubectl get pods
+kubectl logs udaconnect-api-75d74bf777-xb6md
+kubectl get pods
+kubectl exec -it udaconnect-api-75d74bf777-xb6md /bin/sh
+vagrant destroy
+ls
+vim hello.py 
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl apply -f deployment/
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-jwksn
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-h588b
+kubectl get pods
+kubectl logs udaconnect-api-75d74bf777-xb6md
+kubectl logs udaconnect-api-75d74bf777-2pctg
+vagrant destroy
+grep -R log
+grep -Rn log
+grep -Rn "Running on"
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl get services
+kubectl apply -f deployment/
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-rgx6p
+kubectl get pods
+kubectl logs udaconnect-api-75d74bf777-2pctg
+kubectl logs udaconnect-api-75d74bf777-x5dd6
+kubectl exec -it udaconnect-api-75d74bf777-xb6md /bin/sh
+kubectl exec -it udaconnect-api-75d74bf777-x5dd6 /bin/sh
+curl http://localhost:30002/api/persons
+vagrant destroy
+grep -R log
+grep -Rn log
+ls
+vim hello.py 
+grep -Rn " - - "
+grep -Rn "- -"
+vagrant up
+vahrant ssh
+vagrant ssh
+rm ~/.kube/config 
+vim hello.py 
+vim ~/.kube/config 
+kubectl apply -f deployment/
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-xhvhk
+kubectl get pods
+kubectl logs udaconnect-api-75d74bf777-x5dd6
+kubectl logs udaconnect-api-75d74bf777-nszwp
+kubectl exec -it udaconnect-app-d5c6dd9b6-rfftw /bin/sh
+exit
+grep -Rni "location"
+ls
+cd modules/
+ls
+cd persons_api/
+grep -Rni "location"
+exit
+ls
+cd modules/
+ls
+cd persons_api/
+ls
+grep -Rni "ConnectionService"
+cd ../../
+ls
+grep -Rni localhost
+exit
+bin/kafka-server-start.sh config/server.properties
+ls
+cd kafka_2.13-3.5.0/
+bin/kafka-server-start.sh config/server.properties
+gpg --import KEYS
+cd /tmp/
+ls
+ls  -lhtr
+cd
+ls
+mkdir tmp
+cd tmp/
+cd ~/tmp/
+ls
+tar -xzf kafka_2.13-3.5.0.tgz 
+ls
+rm kafka_2.13-3.5.0.tgz 
+bin/zookeeper-server-start.sh config/zookeeper.properties
+cd kafka_2.13-3.5.0/
+ls
+bin/zookeeper-server-start.sh config/zookeeper.properties
+ls
+cd config/
+ls
+cd ../
+bin/kafka-topics.sh --version
+bin/zookeeper-server-start.sh config/zookeeper.properties
+bin/kafka-topics.sh   --zookeeper localhost:9092   --create --topic locations   --partitions 1   --replication-factor 1
+ls
+bin/kafka-topics.sh   --bootstrap-server localhost:9092   --create --topic locations   --partitions 1   --replication-factor 1
+ls
+cd Udacity/
+ls
+cd CloudNativeApplicationArchitecture/
+ls
+cd uda
+cd UdaConnect/
+ls
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl apply -f deployment/
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-rzm27
+vagrant destroy
+git revert 1fbfa893b000e1dc94e541422d77581ff0e7f2ef
+git stash
+git revert 1fbfa893b000e1dc94e541422d77581ff0e7f2ef
+pwd
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl apply -f deployment/
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-nddbx
+kubectl get pods
+kubectl logs udaconnect-api-7b469d78cb-clwrz
+kubectl logs udaconnect-persons-api-844664c9d8-vvpfq
+kubectl logs udaconnect-api-7b469d78cb-clwrz
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl apply -f deployment/
+kubectl get pods
+kubectl logs udaconnect-persons-api-55b7b7c7b5-kgs75
+vagrant destroy
+pip install kafka
+ls
+cd modules/
+ls
+cd persons_api/
+ls
+vim requirements.txt 
+kubectl apply -f deployment/
+cd ../
+ls
+cd ../
+ls
+kubectl apply -f deployment/
+vagrant status
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim requirements.txt 
+kubectl apply -f deployment/
+vim requirements.txt 
+kubectl apply -f deployment/
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl apply -f deployment/
+kubectl get pods
+kubectl logs udaconnect-persons-api-55b7b7c7b5-kjj97
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl apply -f deployment/
+kubectl get pods
+kubectl logs udaconnect-persons-api-55b7b7c7b5-55x7d
+vagrant destroy
+pip uninstall kafka
+pip install kafka-python
+ls
+vim modules/persons_api/requirements.txt
+vagrant up
+sudo cat /etc/rancher/k3s/k3s.yaml
+vagrant ssh
+rm ~/.kube/config 
+vim modules/persons_api/requirements.txt
+vim ~/.kube/config 
+kubectl apply -f deployment/
+kubectl get pods
+kubectl logs udaconnect-persons-api-55b7b7c7b5-x2q9b
+vagrant suspend
+vagrant up
+kubectl get pods
+kubectl logs udaconnect-persons-api-55b7b7c7b5-x2q9b
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl apply -f deployment/
+kubectl get pods
+kubectl logs udaconnect-persons-api-55b7b7c7b5-vts66
+kubectl get pods
+kubectl logs udaconnect-persons-api-55b7b7c7b5-vts66
+vargant destroy
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl apply -f deployment/
+kubectl get pods
+kubectl logs udaconnect-persons-api-55b7b7c7b5-7r8zn
+kubectl get pods
+kubectl logs udaconnect-persons-api-55b7b7c7b5-7r8zn
+kubectl get pods
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl apply -f deployment/
+kubectl get pods
+kubectl logs udaconnect-persons-api-55b7b7c7b5-v8kbq
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl apply -f deployment/
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-gcmbp
+kubectl get pods
+kubectl logs udaconnect-persons-api-55b7b7c7b5-9s9c4
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl apply -f deployment/
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-qvztk
+kubectl get pods
+kubectl logs udaconnect-persons-api-55b7b7c7b5-7ml4r
+vagrant destroy
+history
+ps -ef
+history | grep git
+cd ~/Udacity/CloudNativeApplicationArchitecture/UdaConnect
+ls
+cd modules/
+ls
+cd api/
+ls
+cd ../
+ls
+cd persons_api/
+ls
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.3
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.3
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.3
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.3
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.3
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.3
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.3
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.3
+sudo docker build -t udaconnect-persons-api .
+pip search python-kafka
+pip search
+pip search kafka
+pip list
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.3
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.3
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.3
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.3
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.3
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.3
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.3
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.3
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.3
+ls
+cd modules/
+ls
+cd persons_api/
+ls
+cd app/
+ls
+cd udaconnect/
+ls
+python -m grpc_tools.protoc -I./ --python_out=./ --grpc_python_out=./ person.proto
+python3 -m grpc_tools.protoc -I./ --python_out=./ --grpc_python_out=./ person.proto
+ls
+ls -lhtr
+grep -Rni namespace
+ls
+grep -Rni space
+grep -Rni Namespace
+grep -Rni udaconnect-api
+exit
+cd /usr/share/java
+ls
+pwd
+confluent-hub install
+echo $PATH
+cd
+ls
+cd tmp/
+ls
+wget https://client.hub.confluent.io/confluent-hub-client-latest.tar.gz
+tar -xzf confluent-hub-client-latest.tar.gz 
+ls
+cd bin/
+ls
+file confluent-hub 
+vim confluent-hub 
+pwd
+PATH=$PATH:~//home/kelbenj/tmp/bin
+confluent-hub
+ls
+cd ../
+ls
+cd etc/
+ls
+cd confluent-hub-client/
+ls
+cd ../../
+ls
+cd bin/
+ls
+cat confluent-hub 
+ls
+cd ../
+ls
+rm -rf confluent-hub-client-latest.tar.gz 
+rm -rf etc/
+rm -rf share
+rm -rf bin/
+ls
+curl -O http://packages.confluent.io/archive/7.1/confluent-7.1.1.zip
+
+tar -xzf confluent-7.1.1.zip
+unzip confluent-7.1.1.zip
+ls
+cd kafka_2.13-3.5.0/
+cd ../confluent-7.1.1/
+ls
+cd ci
+cd bin/
+ls
+cd ../
+la
+cd ../
+ls
+PATH=$PATH:~//home/kelbenj/tmp/bin
+confluent-hub
+PATH=$PATH:~/home/kelbenj/tmp/bin
+confluent-hub
+ls
+cd confluent-7.1.1/
+ls
+pwd
+PATH=$PATH:~/home/kelbenj/tmp/kafka_2.13-3.5.0/bin
+confluent-hub
+ls
+~/home/kelbenj/tmp/kafka_2.13-3.5.0/bin/confluent-hub
+cd ~/home/kelbenj/tmp/kafka_2.13-3.5.0/bin/
+ls
+cd bin/
+ls
+pwd
+export $PATH
+PATH=$(getconf PATH)
+export $PATH
+PATH=$PATH:~/home/kelbenj/tmp/kafka_2.13-3.5.0/bin
+export $PATH
+confluent-hub
+cd /home/kelbenj/home/kelbenj/tmp/kafka_2.13-3.5.0/bin
+pwd
+ls
+PATH=$(getconf PATH)
+PATH=$PATH:/home/kelbenj/tmp/confluent-7.1.1/bin
+confluent-hub
+pwd
+ls
+cd /usr/share/
+ls
+mkdir confluence-hub-components
+vim /etc/hosts
+sudo vim /etc/hosts
+ls
+kubectl port-forward kafka-broker-578fdcbd6f-bhq25 9092 -n default
+ls -lhtr ~/Downloads/
+mv ~/Downloads/'Screenshot 2023-06-18 at 19-39-37 How To Deploy Apache Kafka With Kubernetes.png' ~/Udacity/CloudNativeApplicationArchitecture/
+ls
+hisotry | grep git
+history | grep git
+pwd
+ls
+cd deployment/
+ls
+cd kafka/
+ls
+wget https://raw.githubusercontent.com/streamthoughts/kafka-connect-file-pulse/master/docker-compose.yml
+ls
+cd Udacity/
+ls
+cd CloudNativeApplicationArchitecture/
+ls
+cd UdaConnect/
+ls
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl apply -f deployment/
+kubectl get pods
+kubectl get namespaces
+kubectl api-resource --namespaced=true
+kubectl api-resources --namespaced=true
+kubectl get pods
+kubectl get pods --wide
+kubectl get all
+kubectl get pods --all-namespaces
+kubectl logs udaconnect-persons-api-55b7b7c7b5-2qrms
+vagrant destroy
+git revert 1fbfa893b000e1dc94e541422d77581ff0e7f2ef
+git stash
+git revert 1fbfa893b000e1dc94e541422d77581ff0e7f2ef
+ls
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+ls
+cd deployment/
+ls
+cd kafka/
+ls
+kubectl apply -f zookeeper.yaml
+kubectl get services -n kafka
+kubectl get services
+kubectl get services -n default
+kubectl apply -f kafka.yaml
+kubectl get services -n default
+kubectl get pods -n default
+echo "hello world!" | kafkacat -P -b localhost:9092 -t test
+sudo apt install kafkacat
+echo "hello world!" | kafkacat -P -b localhost:9092 -t test
+kafkacat -C -b localhost:9092 -t test
+vagrant destroy
+ls
+confluent-hub
+ls
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+ls
+kubectl apply -f zookeeper.yaml 
+kubectl get services 
+vim kafka.yaml 
+kubectl apply -f kafka.yaml 
+vim kafka.yaml 
+kubectl apply -f kafka.yaml 
+kubectl get services 
+kubectl get pods
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+ls
+kubectl apply -f docker-compose.yml 
+kubectl apply -f docker-compose.yml --validate=false
+ls
+vagrant statud
+vagrant status
+vagrant destroy
+cd ../
+ls
+vagrant up
+ls
+cd deployment/
+ls
+cd kafka/
+ls
+rm docker-compose.yml 
+kubectl apply -f zookeeper.yaml 
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+ls
+kubectl apply -f zookeeper.yaml 
+kubectl get services 
+vim kafka.yaml 
+kubectl apply -f kafka.yaml 
+kubectl get services 
+vagrant destroy
+ls
+cd Udacity/
+ls
+cd CloudNativeApplicationArchitecture/
+ls
+mv 'Screenshot 2023-06-18 at 19-39-37 How To Deploy Apache Kafka With Kubernetes.png' UdaConnect/
+ls
+cd UdaConnect/
+ls
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+ls
+vagrant destroy
+exit
+ls
+cd deployment/
+ls
+cd kafka/
+ls
+kubectl apply -f zookeeper.yaml 
+kubectl get pods
+kubectl get services 
+kubectl get pods
+ls
+vim kafka.yaml 
+kubectl apply -f kafka.yaml 
+kubectl get pods
+kubectl get services 
+history | grep port-forward
+kubectl port-forward kafka-broker-58c5f4d874-hc5dc 9092 -n default
+exit
+cd ../
+ls
+cd ../
+ls
+cd db/
+ls
+cd ../
+ls
+cd scripts/
+ls
+vim run_db_command.sh 
+ls
+python producer.py 
+python3 producer.py 
+history | grep pip
+pip search kafka
+pip list
+pip list | grep kafka
+python3 producer.py 
+pip3 install kafka-python
+python3 producer.py 
+pip uninstall kafka
+pip uninstall kafka-python
+pip install kafka-python
+pip3 install kafka-python
+python3 producer.py 
+ls
+python3 consumer.py 
+python3 producer.py 
+python3 consumer.py 
+exit
+python3 producer.py 
+exit
+ls
+cd ../
+ls
+cd db
+ls
+sed -e 's!insert into public.person (id, first_name, last_name, company_name) values (!!' udaconnect_public_person.sql
+sed -e 's!insert into public.person (id, first_name, last_name, company_name) values (!!' udaconnect_public_person.sql > person.csv
+insert into public.person (id, first_name, last_name, company_name) values (
+sed -e 's!);!!' person.csv 
+sed -e 's!);!!' person.csv > person.csv
+cat person.csv 
+sed -e 's!insert into public.person (id, first_name, last_name, company_name) values (!!' udaconnect_public_person.sql > person.csv
+cat person.csv 
+sed -e 's!insert into public.person (id, first_name, last_name, company_name) values (!!' udaconnect_public_person.sql > tmp.csv
+sed -e 's!);!!' tmp.csv > person.csv
+cat person.csv 
+sed -e 's!\'' person.csv
+
+
+sed -e 's!\\'' person.csv
+
+
+sed -e sed 's/'\'' person.csv
+
+cat person.csv 
+sed "s/['\"]//g" person.csv 
+sed "s/['\"]//g" person.csv > tmp.csv
+mv tmp.csv person.csv 
+cat person.csv 
+ls
+sed -e 's!insert into public.location (id, person_id, coordinate, creation_time) values (' udaconnect_public_location.sql > tmp.csv
+sed -e 's!insert into public.location (id, person_id, coordinate, creation_time) values (!!' udaconnect_public_location.sql > tmp.csv
+cat tmp.csv 
+sed -e 's!);!!' tmp.csv > location.csv
+cat location.csv 
+sed "s/['\"]//g" location.csv > tmp.csv
+mv tmp.csv location.csv 
+cat location.csv 
+cat person.csv 
+exit
+grep -Rni PersonResource.py
+ls
+exit
+ls
+cd modules/
+ls
+cd api/
+ls
+cd app/
+ls
+cd udaconnect/
+ls
+mv ../../../../scripts/consumer.py .
+ls
+pwd
+/bin/python3
+cd Udacity/
+ls
+cd CloudNativeApplicationArchitecture/
+ls
+cd UdaConnect/
+ls
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim run_db_command.sh 
+vim ~/.kube/config 
+ls
+kubectl apply -f deployment/
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-qvztk
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-lqcx4
+kubectl get pods
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+ls
+cd deployment/
+ls
+cd kafka/
+ls
+kubectl apply -f zookeeper.yaml 
+kubectl get pods
+kubectl get services 
+ls
+vim kafka.yaml 
+kubectl get services 
+kubectl apply -f kafka.yaml 
+kubectl get services 
+kubectl get pods
+cd ../../
+git status
+git add docker_cmds
+vim .gitignore 
+git status
+git add *
+git commit -m "Create a consumer and producer for kafka"
+git push
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+ls
+cd deployment/
+ls
+cd kafka/
+ls
+kubectl apply -f kafka.yaml 
+cd ../../
+ls
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+ls
+cd deployment/
+ls
+cd kafka/
+ls
+kubectl apply -f zookeeper.yaml 
+kubectl get pods
+kubectl get services
+vim kafka.yaml 
+kubectl apply -f kafka.yaml 
+kubectl get services
+kubectl get pods
+kubectl port-forward kafka-broker-7f4f7cdc69-wxqdt 9092
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim kafka.yaml 
+vim ~/.kube/config 
+ls
+kubectl apply -f zookeeper.yaml 
+kubectl get services
+kubectl get pods
+kubectl get services
+kubectl get pods
+kubectl get services
+vim kafka.yaml 
+kubectl apply -f kafka.yaml 
+kubectl get services
+kubectl get pods
+cd ../../
+ls
+git status
+git add *
+git commit -m "Obtain locations and persons in consumer.py"
+git push
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim kafka.yaml 
+ls
+cd deployment/
+ls
+cd kafka/
+ls
+kubectl apply -f zookeeper.yaml 
+kubectl
+kubectl apply -f zookeeper.yaml 
+vim ~/.kube/config 
+kubectl apply -f zookeeper.yaml 
+kubectl get pods
+kubectl get services
+ls
+vim kafka.yaml 
+kubectl apply -f kafka.yaml 
+kubectl get pods
+ls
+cd ../
+ls
+cd ../
+;s
+ls
+kubectl apply -f deployment/
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-rjr4w
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-vbvvw
+kubectl delete pod udaconnect-api-5f9dcb65ff-vbvvw
+kubectl get pods
+vagrant destroy
+ls
+cd deployment/
+ls
+cd kafka/
+ls
+kubectl apply -f zookeeper.yaml 
+cd ../../
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+ls
+cd de
+cd deployment/
+ls
+cd kafka/
+ls
+kubectl apply -f zookeeper.yaml 
+kubectl get pods
+kubectl get services
+vim kafka.yaml 
+kubectl get pods
+kubectl apply -f kafka.yaml 
+kubectl get pods
+cd ../
+kubectl apply -f deployment/
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-74lfk
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-74lfk
+cd deployment/
+ls
+cd kafka/
+ls
+vim kafka.yaml 
+ls
+cd ../../
+ls
+kubectl get pods
+kubectl exec -it udaconnect-api-5f9dcb65ff-74lfk bash
+kubectl get pods
+kubectl exec -it udaconnect-api-5f9dcb65ff-74lfk bash
+kubectl get pods
+kubectl exec -it udaconnect-app-6559967c97-9tqn6 bash
+kubectl exec -it udaconnect-app-6559967c97-9tqn6 /bin/sh
+kubectl exec -it udaconnect-api-5f9dcb65ff-74lfk /bin/sh
+kubectl exec -it udaconnect-app-6559967c97-9tqn6 /bin/sh
+ls
+kubectl get pods
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+ls
+cd deployment/
+ls
+cd kafka/
+ls
+kubectl apply -f zookeeper.yaml 
+kubectl get pods
+kubectl get services
+kubectl get pods
+vim kafka.yaml 
+kubectl apply -f kafka.yaml 
+kubectl get pods
+kubectl exec -it zookeeper-69fb744db5-gvjg6 /bin/sh
+ls
+cd ../../
+ls
+kubectl apply -f deployment/
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-j47br
+kubectl get pods
+kubectl exec -it udaconnect-persons-api-844664c9d8-ckbmd /bin/sh
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+ls
+cd deployment/
+;s
+ls
+cd kafka/
+ls
+kubectl apply -f zookeeper.yaml 
+kubectl get pods
+kubectl get services
+vim kafka.yaml 
+kubectl apply -f kafka.yaml 
+kubectl get pods
+cd ../../
+ls
+kubectl apply -f deployment/
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-x6dm6
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-sqmjs
+vagrant destroy
+vagrant up
+sudo cat /etc/rancher/k3s/k3s.yaml
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+cd deployment/
+ls
+cd kafka/
+ls
+kubectl apply -f zookeeper.yaml 
+kubectl get pods
+kubectl get services
+vim kafka.yaml 
+kubectl apply -f kafka.yaml 
+kubectl get pods
+kubectl get services
+kubectl get pods
+cd ../
+ls
+cd ../
+kubectl apply -f deployment/
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-w2rzc
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-xdjv4
+kubectl get pods
+kubectl destroy udaconnect-api-5f9dcb65ff-xdjv4
+kubectl remove udaconnect-api-5f9dcb65ff-xdjv4
+history | gtep kubectl
+history | grep kubectl
+kubectl get pods
+kubectl delete udaconnect-api-5f9dcb65ff-xdjv4
+kubectl get pods
+kubectl delete udaconnect-api-5f9dcb65ff-xdjv4
+kubectl delete pod udaconnect-api-5f9dcb65ff-xdjv4
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-wxt4c
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-wxt4c
+vagrant destroy
+grep -Rni kafka-broker
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+cd deployment/
+ls
+cd kafka/
+ls
+kubectl apply -f zookeeper.yaml 
+kubectl get pods
+kubectl get services
+vim kafka.yaml 
+kubectl apply -f kafka.yaml 
+kubectl get pods
+cd ../../
+kubectl apply -f deployment/
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-t4cg7
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-zfk2v
+grep -Rni kafka-broker
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-zfk2v
+grep -Rni kafka-broker
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+cd deployment/kafka/
+ls
+kubectl apply -f zookeeper.yaml 
+kubectl get pods
+kubectl get services
+vim kafka.yaml 
+kubectl apply -f kafka.yaml 
+kubectl get pods
+kubectl logs kafka-broker-7cc455fc8d-6z45g
+kubectl get pods
+kubectl delete pod kafka-broker-7cc455fc8d-6z45g
+kubectl get pods
+kubectl logs kafka-broker-7cc455fc8d-sg65z
+kubectl delete pod kafka-broker-7cc455fc8d-sg65z
+kubectl get pods
+kubectl logs kafka-broker-7cc455fc8d-f47l6
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+ls
+kubectl apply -f zookeeper.yaml 
+kubectl get pods
+kubectl get services
+vim kafka.yaml 
+kubectl apply -f kafka.yaml 
+kubectl get pods
+kubectl logs kafka-broker-6494f676d4-7n29d
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl apply -f zookeeper.yaml 
+kubectl get pods
+vim kafka.yaml 
+kubectl apply -f kafka.yaml 
+kubectl get pods
+kubectl logs kafka-broker-7476b9b8cb-4z2q2
+vagrant destroy
+vagrant up
+sudo cat /etc/rancher/k3s/k3s.yaml
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl apply -f zookeeper.yaml 
+kubectl get services
+vim kafka.yaml 
+kubectl apply -f kafka.yaml 
+kubectl get pods
+kubectl logs kafka-broker-7c8f5ffff7-bzhzk
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+ls
+kubectl apply -f zookeeper.yaml 
+kubectl get pods
+kubectl get services
+vim kafka.yaml 
+kubectl apply -f kafka.yaml 
+kubectl get pods
+kubectl logs kafka-broker-7c8d799d7c-n2fxv
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl apply -f zookeeper.yaml 
+kubectl get pods
+kubectl get services
+vim kafka.yaml 
+kubectl apply -f kafka.yaml 
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl apply -f zookeeper.yaml 
+kubectl get pods
+kubectl get services
+kubectl get pods
+vim kafka.yaml 
+kubectl get pods
+kubectl apply -f kafka.yaml 
+kubectl get pods
+kubectl logs kafka-broker-6dfdb8cd69-t8h24
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+ls
+kubectl apply -f zookeeper.yaml 
+kubectl get pods
+kubectl get services
+vim kafka.yaml 
+kubectl get services
+kubectl get pods
+kubectl apply -f kafka.yaml 
+kubectl get pods
+kubectl get services
+kubectl get pods
+kubectl logs kafka-broker-d4fc4ff4c-9xlj8
+kubectl get pods
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+ls
+kubectl apply -f zookeeper.yaml 
+kubectl get pods
+kubectl get services
+vim kafka.yaml 
+kubectl get services
+kubectl get pods
+kubectl get services
+kubectl get pods
+kubectl apply -f kafka.yaml 
+kubectl get services
+kubectl get pods
+kubectl logs kafka-broker-d6bc6445f-7q9p5
+kubectl get pods
+kubectl apply -f kafka.yaml 
+kubectl get pods
+kubectl logs kafka-broker-5fc65664f4-27gfp
+kubectl apply -f kafka.yaml 
+kubectl get pods
+kubectl logs kafka-broker-54d4899847-tdmzw
+kubectl apply -f kafka.yaml 
+kubectl logs kafka-broker-54d4899847-tdmzw
+kubectl get pods
+kubectl logs kafka-broker-7776f8695-vvvw6
+kubectl get pods
+kubectl logs kafka-broker-7776f8695-vvvw6
+kubectl get pods
+kubectl logs kafka-broker-7776f8695-vvvw6
+kubectl get pods
+kubectl logs kafka-broker-7776f8695-vvvw6
+kubectl get pods
+kubectl logs kafka-broker-7776f8695-vvvw6
+kubectl apply -f kafka.yaml 
+kubectl get pods
+kubectl get services
+kubectl get pods
+kubectl get services
+kubectl get pods
+kubectl logs kafka-broker-6658798759-j49rw
+kubectl get pods
+kubectl get services
+vim kafka.yaml 
+kubectl apply -f kafka.yaml 
+kubectl get services
+kubectl get pods
+kubectl logs kafka-broker-587d664648-xhsh8
+kubectl apply -f kafka.yaml 
+kubectl get pods
+kubectl logs kafka-broker-844c4cb7f8-hw245
+kubectl apply -f kafka.yaml 
+kubectl get pods
+kubectl get services
+kubectl get pods
+kubectl logs kafka-broker-7fd9457454-57ttw
+kubectl apply -f kafka.yaml 
+kubectl get pods
+kubectl logs kafka-broker-844c4cb7f8-kwdfw
+kubectl apply -f kafka.yaml 
+kubectl get pods
+kubectl get services
+kubectl get pods
+kubectl logs kafka-broker-8455b565cb-k7gjf
+kubectl apply -f kafka.yaml 
+kubectl get pods
+kubectl get services
+kubectl get pods
+kubectl logs kafka-broker-5f9bf9d969-g4kgc
+kubectl get pods
+kubectl logs kafka-broker-5f9bf9d969-g4kgc
+kubectl get services
+kubectl apply -f kafka.yaml 
+kubectl get pods
+kubectl get services
+kubectl get pods
+kubectl logs kafka-broker-594f488bdf-g6l52
+kubectl get pods
+kubectl get services
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim kafka.yaml 
+vim ~/.kube/config 
+kubectl apply -f zookeeper.yaml 
+kubectl get pods
+kubectl get services
+kubectl apply -f kafka.yaml 
+kubectl get services
+kubectl get pods
+kubectl get services
+kubectl get pods
+ls
+kubectl apply -f kafka.yaml 
+kubectl get pods
+kubectl get services
+kubectl exec -it kafka-deployment-7985656cd5-549x5 /bin/sh
+cd ../
+ls
+cd ../
+ls
+kubectl apply -f deployment/
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-cjnpx
+cd deployment/
+ls
+kubectl apply -f udaconnect-api.yaml
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-cjnpx
+kubectl get services
+kubectl apply -f udaconnect-api.yaml
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-cjnpx
+kubectl apply -f udaconnect-api.yaml
+kubectl get pods
+kubectl apply -f udaconnect-api.yaml
+kubectl get pods
+kubectl delete pod udaconnect-api-5f9dcb65ff-cjnpx
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-tk7bx
+kubectl get services
+kubectl get pods
+kubectl delete pod udaconnect-api-5f9dcb65ff-tk7bx
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-v576l
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-v576l
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-l7fln
+cd ../
+ls
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-l7fln
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-v576l
+kubectl get pods
+kubectl get services
+kubectl logs udaconnect-api-5f9dcb65ff-v576l
+kubectl get pods
+ls
+cd deployment/
+ls
+kubectl apply -f kafka.yaml 
+kubectl apply -f udaconnect-api.yaml
+kubectl remove udaconnect-api-5f9dcb65ff-v576l
+kubectl delete pod udaconnect-api-5f9dcb65ff-v576l
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-llvn7
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-llvn7
+kubectl get pods
+kubectl get services
+kubectl logs kafka-deployment-7985656cd5-549x5
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+ls
+cd kafka/
+kubectl apply -f zookeeper.yaml 
+kubectl apply -f kafka.yaml 
+kubectl get pods
+kubectl get services
+kubectl get pods
+kubectl get services
+kubectl get pods
+ls
+cd ../
+;s
+ls
+kubectl apply -f deployment/
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-dvt98
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-7sm9r
+kubectl logs udaconnect-api-5f9dcb65ff-dvt98
+kubectl get pods
+kubectl delete pod udaconnect-api-5f9dcb65ff-dvt98
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-ltz7v
+kubectl get pods
+kubectl delete pod udaconnect-api-5f9dcb65ff-ltz7v
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-98kzc
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+ls
+cd deployment/
+ls
+cd kafka/
+ls
+kubectl apply -f zookeeper.yaml 
+kubectl get pods
+kubectl get services
+ls
+kubectl apply -f kafka.yaml 
+kubectl get services
+kubectl get pods
+kubectl get services
+kubectl get pods
+ls
+cd ../
+ls
+cd ../
+ls
+kubectl apply -f deployment/
+kubectl get pods
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+ls
+cd de
+cd deployment/
+ls
+cd kafka/
+ls
+kubectl apply -f zookeeper.yaml 
+kubectl get pods
+kubectl get services
+kubectl get pods
+kubectl apply -f kafka.yaml 
+ls
+kubectl get services
+kubectl get pods
+ls
+kubectl get pods
+cd ../../
+ls
+kubectl apply -f deployment/
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-2kgxx
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-7dp2z
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+ls
+cd deployment/kafka/
+ls
+kubectl apply -f zookeeper.yaml 
+kubectl get pods
+kubectl apply -f kafka.yaml 
+kubectl get pods
+cd ../
+ls
+cd ../
+kubectl apply -f deployment/
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-9crcp
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-g2rk4
+kubectl get services
+kubectl get pods
+kubectl delete pod udaconnect-api-5f9dcb65ff-g2rk4
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-l2qk6
+kubectl get pods
+kubectl remove udaconnect-api-5f9dcb65ff-l2qk6
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-l2qk6
+kubectl get pods
+kubectl remove udaconnect-api-5f9dcb65ff-l2qk6
+kubectl remove pod udaconnect-api-5f9dcb65ff-l2qk6
+kubectl delete pod udaconnect-api-5f9dcb65ff-l2qk6
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-p9ndr
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-p9ndr
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-p9ndr
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-p9ndr
+kubectl get pods
+kubectl get services
+kubectl get pods
+kubectl delete pod udaconnect-api-5f9dcb65ff-p9ndr
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-qglnq
+kubectl get pods
+kubectl remove pod udaconnect-api-5f9dcb65ff-qglnq
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-qglnq
+kubectl get pods
+kubectl remove pod udaconnect-api-5f9dcb65ff-qglnq
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-qglnq
+ls
+cd deployment/
+ls
+kubectl apply -f udaconnect-api.yaml 
+kubectl get pods
+kubectl delete pod udaconnect-api-5f9dcb65ff-qglnq
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-8qj6w
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-8qj6w
+kubectl apply -f udaconnect-api.yaml 
+kubectl get pods
+kubectl apply -f udaconnect-api.yaml 
+kubectl get pods
+kubectl remove pod udaconnect-api-5f9dcb65ff-8qj6w
+kubectl get pods
+kubectl remove pod udaconnect-api-5f9dcb65ff-8qj6w
+kubectl delete pod udaconnect-api-5f9dcb65ff-8qj6w
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-8vrsx
+
+kubectl apply -f udaconnect-api.yaml 
+kubectl delete pod udaconnect-api-5f9dcb65ff-8vrsx
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-hrsc7
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-hrsc7
+vagrant destroy
+va
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+ls
+cd kafka/
+kubectl apply -f zookeeper.yaml 
+kubectl apply -f kafka.yaml 
+kubectl get pods
+cd ../../
+ls
+kubectl apply -f deployment/
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-str2s
+kubectl get services
+cd ../../
+ls
+cd CloudNativeApplicationArchitecture/
+ls
+cd UdaConnect/
+ls
+cd deployment/
+ls
+kubectl apply -f udaconnect-api.yaml 
+kubectl get pods
+kubectl delete pod udaconnect-api-5f9dcb65ff-str2s
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-gh9t4
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-9crcp
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-jdwfp
+cd ../
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-jdwfp
+cd deployment/
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-gh9t4
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+cd kafka/
+ls
+kubectl apply -f 1-zookeeper.yaml 
+kubectl get pods
+kubectl get services
+vim 1-kafka.yaml 
+kubectl get services
+kubectl get pods
+kubectl apply -f 1-kafka.yaml 
+kubectl get pods
+kubectl get services
+vagrant destroy
+exit
+cd ../../
+ls
+cd db/
+ls
+cd ../deployment/
+ls
+cd kafka/
+ls
+cd ../../
+ls
+cd scripts/
+ls
+python3 producer.py 
+vim producer.py 
+python3 producer.py 
+vim producer.py 
+python3 producer.py 
+vim producer.py 
+python3 producer.py 
+vim producer.py 
+python3 producer.py 
+vim producer.py 
+python3 producer.py 
+vim producer.py 
+python3 producer.py 
+vim producer.py 
+python3 producer.py 
+vim producer.py 
+python3 producer.py 
+vim producer.py 
+python3 producer.py 
+vim producer.py 
+python3 producer.py 
+vim producer.py 
+python3 producer.py 
+vim producer.py 
+python3 producer.py 
+ls
+python3 producer.py 
+vim producer.py 
+python3 producer.py 
+vim producer.py 
+python3 producer.py 
+vim producer.py 
+python3 producer.py 
+vim producer.py 
+python3 producer.py 
+vim producer.py 
+python3 producer.py 
+vim producer.py 
+python3 producer.py 
+vim producer.py 
+python3 producer.py 
+vim producer.py 
+python3 producer.py 
+vim producer.py 
+python3 producer.py 
+vim producer.py 
+python3 producer.py 
+vim producer.py 
+python3 producer.py 
+vim producer.py 
+python3 producer.py 
+vim producer.py 
+exit
+kubectl exec -it kafka-service -c 10.43.87.6 -n labkafka -- kafka-topics --create --topic persons --bootstrap-server localhost:9092
+kubectl exec -it kafka-service -c 10.43.87.6 -- kafka-topics --create --topic persons --bootstrap-server localhost:9092
+kubectl exec kafka-broker-7f4f7cdc69-wxqdt -- /opt/kafka/bin/kafka-topics.sh --create --topic persons --partitions 1 --bootstrap-server localhost:9092 --replication-factor 1
+kubectl exec kafka-broker-7f4f7cdc69-wxqdt -- /opt/kafka/bin/kafka-topics.sh --create --topic locations --partitions 1 --bootstrap-server localhost:9092 --replication-factor 1
+kubectl exec kafka-broker-64cb57c8f8-sb6v2 -- /opt/kafka/bin/kafka-topics.sh --create --topic persons --partitions 1 --bootstrap-server localhost:9092 --replication-factor 1
+kubectl exec kafka-broker-64cb57c8f8-sb6v2 -- /opt/kafka/bin/kafka-topics.sh --create --topic locations --partitions 1 --bootstrap-server localhost:9092 --replication-factor 1
+kubectl exec kafka-broker-6d849b7677-hzplf -- /opt/kafka/bin/kafka-topics.sh --create --topic locations --partitions 1 --bootstrap-server localhost:9092 --replication-factor 1
+kubectl exec kafka-broker-6d849b7677-hzplf -- /opt/kafka/bin/kafka-topics.sh --create --topic persons --partitions 1 --bootstrap-server localhost:9092 --replication-factor 1
+kubectl exec kafka-broker-6bb97c6497-xhhz7 -- /opt/kafka/bin/kafka-topics.sh --create --topic persons --partitions 1 --bootstrap-server localhost:9092 --replication-factor 1
+kubectl exec kafka-broker-6bb97c6497-xhhz7 -- /opt/kafka/bin/kafka-topics.sh --create --topic locations --partitions 1 --bootstrap-server localhost:9092 --replication-factor 1
+kubectl exec kafka-broker-7dd776c6fb-p7lvz -- /opt/kafka/bin/kafka-topics.sh --create --topic locations --partitions 1 --bootstrap-server localhost:9092 --replication-factor 1
+kubectl exec kafka-broker-7dd776c6fb-p7lvz -- /opt/kafka/bin/kafka-topics.sh --create --topic persons --partitions 1 --bootstrap-server localhost:9092 --replication-factor 1
+exit
+kubectl port-forward kafka-broker-7d8795b784-lml7g 9092
+kubectl get services 
+kubectl get pods
+kubectl get all
+ls
+cd ../
+ls
+cd scripts/
+ls
+vim ../deployment/kafka/kafka.yaml 
+kubectl get services 
+kubectl exec -it kafka-service -c 10.43.87.6 -- kafka-topics --create --topic persons --bootstrap-server localhost:9092
+kubectl port-forward kafka-broker-7d8795b784-lml7g 9092
+kubectl port-forward kafka-broker-7f4f7cdc69-wxqdt 9092
+kubectl port-forward kafka-broker-5579fd78b5-p27t5 9092
+kubectl port-forward kafka-broker-64cb57c8f8-sb6v2 9092
+kubectl port-forward kafka-broker-6d849b7677-hzplf 9092
+kubectl port-forward kafka-broker-6bb97c6497-xhhz7 9092
+kubectl port-forward kafka-broker-7dd776c6fb-p7lvz 9092
+kubectl port-forward kafka-broker-7dd8f9d75f-xfzjp 9092
+kubectl port-forward kafka-broker-55c76747b5-xhp9d
+kubectl port-forward kafka-broker-55c76747b5-xhp9d 9092
+kubectl port-forward udaconnect-api-5f9dcb65ff-cjnpx 9092
+kubectl port-forward udaconnect-api-5f9dcb65ff-v576l 9092
+kubectl kafka-deployment-7985656cd5-549x5 9092
+kubectl port-forward kafka-deployment-7985656cd5-549x5 9092
+kubectl port-forward 10.43.175.39 9092
+kubectl port-forward kafka-deployment-7985656cd5-549x5 9092
+kubectl port-forward kafka-deployment-5c47fd5dc5-gw96w 9092
+kubectl port-forward kafka-deployment-5c47fd5dc5-5k69r 9092
+kubectl port-forward kafka-deployment-7985656cd5-9spnx 9092
+kubectl port-forward kafka-deployment-7985656cd5-hzmgd 9092
+kubectl port-forward kafka-broker-5d985964bd-zzbkn 9092
+exit
+kubectl get pods
+kubectl exec --stdin --tty zookeeper-69fb744db5-tdjjw -- /bin/bash
+kubectl get pods
+kubectl exec --stdin --tty kafka-broker-7d8795b784-lml7g -- /bin/bash
+kubectl exec --stdin --tty zookeeper-69fb744db5-tdjjw -- /bin/bash
+kubectl exec --stdin --tty kafka-broker-7d8795b784-lml7g -- /bin/bash
+kubectl get pods
+kubectl exec kafka-broker-7d8795b784-lml7g -- ps aux
+kubectl exec kafka-broker-7d8795b784-lml7g -- ls /
+kubectl exec kafka-broker-7d8795b784-lml7g -- bin/kafka-topics.sh --create --topic persons --partitions 1 --bootstrap-server localhost:9092 --replication-factor 1
+/opt/kafka/bin/kafka-topics.sh --create --topic persons --partitions 1 --bootstrap-server localhost:9092 --replication-factor 1
+kubectl exec kafka-broker-7d8795b784-lml7g -- /opt/kafka/bin/kafka-topics.sh --create --topic persons --partitions 1 --bootstrap-server localhost:9092 --replication-factor 1
+kubectl exec kafka-broker-5579fd78b5-p27t5 -- /opt/kafka/bin/kafka-topics.sh --create --topic persons --partitions 1 --bootstrap-server localhost:9092 --replication-factor 1
+kubectl exec kafka-broker-5579fd78b5-p27t5 -- /opt/kafka/bin/kafka-topics.sh --create --topic locations --partitions 1 --bootstrap-server localhost:9092 --replication-factor 1
+ps -ef
+kubectl exec kafka-broker-7dd8f9d75f-xfzjp -- /opt/kafka/bin/kafka-topics.sh --create --topic locations --partitions 1 --bootstrap-server localhost:9092 --replication-factor 1
+kubectl exec kafka-broker-7dd8f9d75f-xfzjp -- /opt/kafka/bin/kafka-topics.sh --create --topic persons --partitions 1 --bootstrap-server localhost:9092 --replication-factor 1
+kubectl exec kafka-broker-55c76747b5-xhp9d -- /opt/kafka/bin/kafka-topics.sh --create --topic persons --partitions 1 --bootstrap-server localhost:9092 --replication-factor 1
+kubectl exec kafka-broker-7476b9b8cb-4z2q2 -- /opt/kafka/bin/kafka-topics.sh --create --topic persons --partitions 1 --bootstrap-server localhost:9092 --replication-factor 1
+kafka-topics — create — bootstrap-server localhost:29092 — replication-factor 1 — partitions 1
+kubectl exec kafka-deployment-7985656cd5-549x5 -- /opt/kafka/bin/kafka-topics.sh --create --topic locations --partitions 1 --bootstrap-server localhost:9092 --replication-factor 1
+kubectl exec kafka-deployment-7985656cd5-549x5 -- /bin/kafka-topics.sh --create --topic locations --partitions 1 --bootstrap-server localhost:9092 --replication-factor 1
+kubectl exec kafka-deployment-7985656cd5-549x5 -- /bin/kafka-topics --create --topic locations --partitions 1 --bootstrap-server localhost:9092 --replication-factor 1
+kubectl exec kafka-deployment-7985656cd5-549x5 -- /bin/kafka-topics --create --topics persons --partitions 1 --bootstrap-server localhost:29092 --replication-factor 1
+kubectl exec kafka-deployment-7985656cd5-549x5 -- /bin/kafka-topics --create --topic persons --partitions 1 --bootstrap-server localhost:29092 --replication-factor 1
+kubectl exec kafka-deployment-5c47fd5dc5-gw96w -- /bin/kafka-topics --create --topic persons --partitions 1 --bootstrap-server localhost:29092 --replication-factor 1
+kubectl exec kafka-deployment-5c47fd5dc5-gw96w -- /bin/kafka-topics --create --topic locations --partitions 1 --bootstrap-server localhost:9092 --replication-factor 1
+kubectl exec kafka-deployment-7985656cd5-9spnx -- /bin/kafka-topics --create --topic locations --partitions 1 --bootstrap-server localhost:9092 --replication-factor 1
+kubectl exec kafka-deployment-7985656cd5-9spnx -- /bin/kafka-topics --create --topic persons --partitions 1 --bootstrap-server localhost:29092 --replication-factor 1
+kubectl exec kafka-deployment-7985656cd5-hzmgd  -- /bin/kafka-topics --create --topic persons --partitions 1 --bootstrap-server localhost:29092 --replication-factor 1
+kubectl exec kafka-deployment-7985656cd5-hzmgd -- /bin/kafka-topics --create --topic locations --partitions 1 --bootstrap-server localhost:9092 --replication-factor 1
+kubectl exec kafka-broker-5d985964bd-zzbkn -- /bin/kafka-topics --create --topic locations --partitions 1 --bootstrap-server localhost:9092 --replication-factor 1
+kubectl exec kafka-broker-5d985964bd-zzbkn -- /opt/kafka/bin/kafka-topics.sh --create --topic persons --partitions 1 --bootstrap-server localhost:9092 --replication-factor 1
+kubectl exec kafka-broker-5d985964bd-zzbkn -- /opt/kafka/bin/kafka-topics.sh --create --topic locations --partitions 1 --bootstrap-server localhost:9092 --replication-factor 1
+exit
+cd ../
+ls
+cd modules/
+ls
+cd api/
+ls
+cd ../
+ls
+cd api/
+ls
+docker build -t udaconnect-persons-api .
+sudo docker build -t udaconnect-persons-api .
+docker build -t udaconnect-api .
+sudo docker build -t udaconnect-api .
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.4
+sudo docker push bjk1456/udaconnect-api:v1.0.4
+sudo docker build -t udaconnect-api .
+/usr/local/bin/python -m pip install --upgrade pip
+pip --version 
+pip install --upgrade pip
+sudo docker build -t udaconnect-api .
+pip --version 
+RUN python -m pip install --upgrade pip
+python -m pip install --upgrade pip
+python3 -m pip install --upgrade pip
+pip3
+sudo docker build -t udaconnect-api .
+sudo docker system prune -a
+docker build -t udaconnect-api .
+sudo docker build -t udaconnect-api .
+pip install --upgrade pip
+sudo docker build -t udaconnect-api .
+which pip
+sudo docker build -t udaconnect-api .
+cd /bin/
+ls
+file sh
+cd ~/Udacity/CloudNativeApplicationArchitecture/UdaConnect/modules/api
+ls
+sudo docker build -t udaconnect-api .
+pip --version 
+pip kafka-python
+docker build -t udaconnect-api .
+sudo docker build -t udaconnect-api .
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.4
+sudo docker push bjk1456/udaconnect-api:v1.0.4
+history | grep exec
+which python3
+sudo docker build -t udaconnect-api .
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.4
+sudo docker push bjk1456/udaconnect-api:v1.0.4
+sudo docker build -t udaconnect-api .
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.4
+sudo docker push bjk1456/udaconnect-api:v1.0.4
+sudo docker build -t udaconnect-api .
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.4
+sudo docker push bjk1456/udaconnect-api:v1.0.4
+sudo docker build -t udaconnect-api .
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.4
+sudo docker push bjk1456/udaconnect-api:v1.0.4
+sudo docker build -t udaconnect-api .
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.4
+sudo docker push bjk1456/udaconnect-api:v1.0.4
+sudo docker build -t udaconnect-api .
+sudo docker push bjk1456/udaconnect-api:v1.0.4
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.4
+sudo docker push bjk1456/udaconnect-api:v1.0.4
+sudo docker build -t udaconnect-api .
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.4
+sudo docker push bjk1456/udaconnect-api:v1.0.4
+sudo docker build -t udaconnect-api .
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.4
+sudo docker push bjk1456/udaconnect-api:v1.0.4
+sudo docker build -t udaconnect-api .
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.4
+sudo docker push bjk1456/udaconnect-api:v1.0.4
+sudo docker build -t udaconnect-api .
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.4
+sudo docker push bjk1456/udaconnect-api:v1.0.4
+sudo docker build -t udaconnect-api .
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.4
+sudo docker push bjk1456/udaconnect-api:v1.0.4
+sudo docker build -t udaconnect-api .
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.4
+sudo docker push bjk1456/udaconnect-api:v1.0.4
+sudo docker build -t udaconnect-api .
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.4
+sudo docker push bjk1456/udaconnect-api:v1.0.4
+cat /etc/hosts
+vim /etc/hosts
+sudo vim /etc/hosts
+sudo docker build -t udaconnect-api .
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.4
+sudo docker push bjk1456/udaconnect-api:v1.0.4
+sudo docker build -t udaconnect-api .
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.4
+sudo docker push bjk1456/udaconnect-api:v1.0.4
+sudo docker build -t udaconnect-api .
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.4
+sudo docker push bjk1456/udaconnect-api:v1.0.4
+sudo docker build -t udaconnect-api .
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.4
+sudo docker push bjk1456/udaconnect-api:v1.0.4
+sudo docker build -t udaconnect-api .
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.4
+sudo docker push bjk1456/udaconnect-api:v1.0.4
+sudo docker build -t udaconnect-api .
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.4
+sudo docker push bjk1456/udaconnect-api:v1.0.4
+sudo docker build -t udaconnect-api .
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.4
+sudo docker push bjk1456/udaconnect-api:v1.0.4
+sudo docker build -t udaconnect-api .
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.4
+sudo docker push bjk1456/udaconnect-api:v1.0.4
+sudo docker build -t udaconnect-api .
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.4
+sudo docker push bjk1456/udaconnect-api:v1.0.4
+sudo docker build -t udaconnect-api .
+sudo docker tag udaconnect-api bjk1456/udaconnect-api:v1.0.4
+sudo docker push bjk1456/udaconnect-api:v1.0.4
+exit
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+ls -la
+vim consumer.py 
+vim -r consumer.py 
+vim consumer.py 
+ls -la
+rm .consumer.py.swp 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+cp /home/kelbenj/Udacity/CloudNativeApplicationArchitecture/UdaConnect/modules/api/app/udaconnect/consumer.py  .
+ls
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer.py 
+python3 consumer.py 
+vim consumer-1.py
+python3 consumer-1.py 
+vim consumer-1.py
+python3 consumer-1.py 
+vim consumer-1.py
+python3 consumer-1.py 
+vim consumer-1.py
+python3 consumer-1.py 
+exit
+cd Udacity/
+ls
+cd CloudNativeApplicationArchitecture/
+ls
+cd UdaConnect/
+ls
+curl -X GET "http://localhost:30001/api/locations" -H "accept: application/json"
+history | grep install
+pip3 show kafka-python
+curl -X GET "http://localhost:30001/api/locations" -H "accept: application/json"
+cd Udacity/
+ls
+cd CloudNativeApplicationArchitecture/
+ls
+cd UdaConnect/
+ls
+vagrant up
+vagrant ssh
+rm .consumer.py.swp 
+rm ~/.kube/config 
+vim ~/.kube/config 
+ls
+cd deployment/
+ls
+cd kafka/
+ls
+kubectl apply -f 1-zookeeper.yaml 
+kubectl get pods
+kubectl get services 
+kubectl get pods
+ls
+vim 1-kafka.yaml 
+kubectl get pods
+kubectl apply -f 1-kafka.yaml 
+kubectl get pods
+kubectl get services 
+vim 1-kafka.yaml 
+vagrant destroy
+ls
+mv * /tmp/kafka/
+ls
+/usr/local/bin/helm install my-release oci://registry-1.docker.io/bitnamicharts/kafka
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+/usr/local/bin/helm install my-release oci://registry-1.docker.io/bitnamicharts/kafka
+/usr/local/bin/helm repo add bitnami ‌https://charts.bitnami.com/bitnami‌
+ls
+/usr/local/bin/helm repo update
+helm repo add bitnami https://charts.bitnami.com/bitnami
+which helm
+kubectl cluster-info
+helm repo update
+helm template kafka bitnami/kafka --set volumePermissions.enabled=true --set zookeeper.volumePermissions.enabled=true kafka.yaml
+ls
+helm template kafka bitnami/kafka --set volumePermissions.enabled=true --set zookeeper.volumePermissions.enabled=true
+ls
+helm template kafka bitnami/kafka --set volumePermissions.enabled=true --set zookeeper.volumePermissions.enabled=true > kafka.yaml
+ls
+kubectl apply -f kafka.yaml
+kubectl get pods
+kubectl get services 
+kubectl get pods
+ls
+grep zoo
+grep zoo *
+kubectl get services 
+kubectl get pods
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+ls
+rm kafka.yaml 
+helm template kafka bitnami/kafka --set volumePermissions.enabled=true --set zookeeper.volumePermissions.enabled=true --set externalAccess.enabled=true --set externalAccess.autoDiscovery.enabled=true --set externalAccess.service.type=NodePort > kafka.yaml
+helm template kafka bitnami/kafka --set volumePermissions.enabled=true --set zookeeper.volumePermissions.enabled=true --set externalAccess.service.type=NodePort > kafka.yaml
+ls
+kubectl apply -f kafka.yaml
+kubectl get pods
+kubectl get services 
+kubectl get pods
+kubectl get services 
+cd ../../
+kubectl apply -f deployment/
+kubectl get pods
+kubectl get services 
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-shzxd
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-gh9t4
+kubectl logs udaconnect-api-5f9dcb65ff-mxpbw
+kubectl get services 
+ls
+cd deployment/
+ls
+kubectl get pods
+kubectl remove pod udaconnect-api-5f9dcb65ff-mxpbw
+ls
+kubectl get pods
+ls
+kubectl apply -f udaconnect-api.yaml 
+kubectl delete pod udaconnect-api-5f9dcb65ff-mxpbw
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-nk2xt
+kubectl get pods
+kubectl delete pod udaconnect-api-5f9dcb65ff-nk2xt
+kubectl apply -f udaconnect-api.yaml 
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-4qtmz
+kubectl apply -f udaconnect-api.yaml 
+kubectl delete pod udaconnect-api-5f9dcb65ff-4qtmz
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-ftc9r
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+ls
+cd kafka/
+ls
+kubectl apply -f kafka.yaml
+kubectl get pods
+cd ../
+ls
+cd ../
+ls
+kubectl get pods
+kubectl get services 
+kubectl get pods
+kubectl apply -f deployment/
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-9qcjf
+kubectl get pods
+kubectl delete pod udaconnect-api-5f9dcb65ff-9qcjf
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-dqv46
+kubectl get services 
+kubectl logs udaconnect-api-5f9dcb65ff-dqv46
+kubectl get services 
+kubectl remove pod udaconnect-api-5f9dcb65ff-dqv46
+kubectl apply -f udaconnect-api.yaml 
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-dqv46
+cd deployment/
+las
+ls
+kubectl apply -f udaconnect-api.yaml 
+kubectl get pods
+kubectl remove pod udaconnect-api-5f9dcb65ff-dqv46
+kubectl get pods
+kubectl delete pod udaconnect-api-5f9dcb65ff-dqv46
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-n46r5
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-n46r5
+kubectl get pods
+kubectl logs udaconnect-app-6559967c97-kgr92
+cd ../
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-bnzws
+kubectl get pods
+kubectl logs udaconnect-app-6559967c97-kgr92
+kubectl logs udaconnect-api-5f9dcb65ff-n46r5
+cd deployment/
+;s
+ls
+kubectl apply -f udaconnect-api.yaml 
+kubectl get pods
+kubectl delete pod udaconnect-api-5f9dcb65ff-n46r5
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-79nmn
+vagrant destroy
+ls
+cd kafka/
+;s
+ls
+vagrant up
+vagrant ssh
+ls
+rm ~/.kube/config 
+vim ~/.kube/config 
+kubectl apply -f kafka.yaml
+cd ../
+ls
+cd ../
+kubectl apply -f deployment/
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-ql2mn
+kubectl get pods
+kubectl get services 
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-7csqc
+kubectl get pods
+ls
+cd deployment/
+ls
+kubectl apply -f udaconnect-api.yaml 
+kubectl get pods
+kubectl delete pod udaconnect-api-5f9dcb65ff-7csqc
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-nwfbk
+kubectl get pods
+kubectl delete pod udaconnect-api-5f9dcb65ff-nwfbk
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-cfb99
+kubectl delete pod udaconnect-api-5f9dcb65ff-cfb99
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-rxf82
+kubectl get pods
+kubectl delete pod udaconnect-api-5f9dcb65ff-rxf82
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-qpm9b
+kubectl delete pod udaconnect-api-5f9dcb65ff-qpm9b
+kubectl get pods
+ls
+kubectl apply -f udaconnect-api.yaml 
+kubectl get pods
+kubectl delete pod udaconnect-api-5f9dcb65ff-xs8t5
+kubectl get pods
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+ls
+cd kafka/
+ls
+kubectl apply -f kafka.yaml
+cd ../../
+ls
+kubectl apply -f deployment/
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-dc78p
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-dc78p
+kubectl get pods
+kubectl remove pod udaconnect-api-5f9dcb65ff-dc78p
+kubectl delete pod udaconnect-api-5f9dcb65ff-dc78p
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-gxmfp
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-bsc6l
+kubectl get pods
+kubectl delete pod udaconnect-api-5f9dcb65ff-gxmfp
+kubectl get pods
+ls
+cd deployment/
+ls
+kubectl logs udaconnect-api-5f9dcb65ff-gxmfp
+kubectl logs udaconnect-api-5f9dcb65ff-8qw7z
+ls
+kubectl apply -f udaconnect-api.yaml 
+kubectl get pods
+grep -R 30002
+cd ../
+ls
+grep -R 30002
+kubectl get pods
+kubectl logs udaconnect-persons-api-844664c9d8-h6d5p
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-bsc6l
+kubectl get pods
+kubectl logs udaconnect-persons-api-844664c9d8-h6d5p
+kubectl get pods
+kubectl logs udaconnect-api-6b87589cfd-6mkr4
+kubectl get pods
+kubectl logs udaconnect-api-6b87589cfd-6mkr4
+kubectl get pods
+kubectl delete pod udaconnect-api-6b87589cfd-6mkr4
+kubectl get pods
+kubectl logs udaconnect-api-6b87589cfd-m9rrw
+ls
+cd deployment/
+ls
+kubectl apply -f udaconnect-api.yaml 
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-x4qdf
+vagrant destroy
+ls
+cd kafka/
+ls
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+ls
+kubectl apply -f kafka.yaml
+cd ../../
+kubectl apply -f deployment/
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-5wdbg
+kubectl get pods
+kubectl logs udaconnect-persons-api-75975c5b86-5lj5h
+kubectl get pods
+kubectl logs udaconnect-persons-api-75975c5b86-5lj5h
+kubectl logs udaconnect-api-5f9dcb65ff-5wdbg
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+ls
+cd deployment/
+ls
+cd kafka/
+ls
+kubectl apply -f kafka.yaml
+kubectl get pods
+kubectl get services 
+cd ../../
+ls
+kubectl apply -f deployment/
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-bxzjx
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-25thb
+kubectl get pods
+ls
+kubectl apply -f deployment/
+kubectl get pods
+kubectl delete pod udaconnect-api-5f9dcb65ff-25thb
+kubectl get pods
+kubectl logs udaconnect-api-7b469d78cb-j4rls
+kubectl get pods
+kubectl logs udaconnect-api-7b469d78cb-j4rls
+kubectl get pods
+ls
+cd deployment/
+ls
+kubectl apply -f udaconnect-api.yaml 
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-9qg4p
+kubectl get pods
+ls
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-9qg4p
+ls
+kubectl get pods
+kubectl delete pod udaconnect-api-5f9dcb65ff-9qg4p
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-fz4mc
+kubectl get pods
+kubectl delete pod udaconnect-api-5f9dcb65ff-fz4mc
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-rq6kq
+ls
+kubectl apply -f udaconnect-api.yaml 
+kubectl get pods
+kubectl delete pod udaconnect-api-5f9dcb65ff-rq6kq
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-bn65g
+kubectl get pods
+kubectl delete pod udaconnect-api-5f9dcb65ff-bn65g
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-n49l8
+kubectl get pods
+kubectl delete pod udaconnect-api-5f9dcb65ff-n49l8
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-xrdzf
+kubectl get pods
+kubectl delete pod udaconnect-api-5f9dcb65ff-xrdzf
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-j4wk2
+kubectl get pods
+kubectl delete pod udaconnect-api-5f9dcb65ff-j4wk2
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-7zqmd
+kubectl get pods
+kubectl delete pod udaconnect-api-5f9dcb65ff-7zqmd
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-6xzbz
+vagrant destroy
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+ls
+cd kafka/
+;s
+ls
+kubectl apply -f kafka.yaml
+cd ../../
+ls
+kubectl get pods
+ls
+kubectl apply -f deployment/
+kubectl get pods
+ls
+cd deployment/
+ls
+kubectl apply -f udaconnect-api-persons.yaml 
+cd ../
+ls
+kubectl get pods
+sh scripts/run_db_command.sh postgres-59ff9bdfdc-blq7f
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-ccmn8
+kubectl get pods
+kubectl delete pod udaconnect-api-5f9dcb65ff-ccmn8
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-gn7p2
+kubectl get pods
+kubectl delete pod udaconnect-api-5f9dcb65ff-gn7p2
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-4jc65
+kubectl get pods
+kubectl delete pod udaconnect-api-5f9dcb65ff-4jc65
+kubectl get pods
+kubectl logs udaconnect-api-5f9dcb65ff-ncssd
+file /home/kelbenj/Udacity/CloudNativeApplicationArchitecture/UdaConnect/db/person.csv
+ls
+cd deployment/
+ls
+cd ../
+ls
+cd db
+ls
+cd ../
+ls
+cd deployment/
+ls
+cd ../
+ls
+cd modules/
+ls
+cd api/
+ls
+kubectl get pods
+kubectl exec -it udaconnect-api-5f9dcb65ff-ncssd /bin/sh 
+exit
+exit
+ls
+cd ../
+ls
+cd persons_api/
+ls
+history | grep udaconnect-person
+sudo docker build -t udaconnect-persons-api .
+udo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.4
+sudo docker build -t udaconnect-persons-api .
+exit
+ls
+cd modules/
+ls
+cd persons_api/
+ls
+cd app/
+ls
+cd ../
+ls
+cd locations_
+cd locations_gRPC_api/
+ls
+cd app/
+ls
+cd udaconnect/
+ls
+cd ../
+ls
+cd ../
+ls
+cd app/
+ls
+cd udaconnect/
+ls
+mv location* ../../
+ls
+cd ../../
+ls
+cd modules/
+ls
+cd locations_gRPC_api/
+ls
+grep OrderMessage *
+grep -i OrderMessage *
+grep -iR OrderMessage *
+grep -iRl OrderMessage *
+grep -in OrderMessage *
+grep -in stub *
+grep -in order *
+exit
+ls
+cd Udacity/
+ls
+ls -lhtr
+cd CloudNativeApplicationArchitecture/
+ls
+cd UdaConnect/
+ls
+vagrant up
+vagrant ssh
+rm ~/.kube/config 
+vim ~/.kube/config 
+cd deployment/
+ls
+cd ../
+kubectl apply -f deployment/
+kubectl get pods
+sh scripts/run_db_command.sh postgres-5c4dbcb7f-gfftf
+kubectl get pods
+kubectl logs udaconnect-persons-api-75465d46f9-bkzp9
+kubectl get pods
+kubectl exec -it udaconnect-persons-api-75465d46f9-bkzp9 /bin/sh 
+kubectl get pods
+kubectl logs udaconnect-persons-api-75465d46f9-bkzp9
+kubectl get pods
+kubectl exec -it udaconnect-persons-api-75465d46f9-bkzp9 /bin/sh 
+kubectl get pods
+cd ~/Downloads/
+ls
+ls -lhtr
+mv api-for_persons-latest-resolved.json ~/Udacity/CloudNativeApplicationArchitecture/UdaConnect/docs/
+kubectl cp loudNativeApplicationArchitecture/UdaConnect/db/person.csv udaconnect-persons-api-75465d46f9-xbrq6:/app/udaconnect/person.csv
+kubectl cp ./db/person.csv udaconnect-persons-api-75465d46f9-xbrq6:/app/udaconnect/person.csv
+kubectl cp ./db/person.csv udaconnect-persons-api-75465d46f9-s2lm6:/app/udaconnect/person.csv
+ls
+cd modules/
+ls
+cd persons_api/
+ls
+docker build -t udaconnect-persons-api .
+sudo docker build -t udaconnect-persons-api .
+sudo docker tag udaconnect-persons-api bjk1456/udaconnect-persons-api:v1.0.5
+sudo docker push bjk1456/udaconnect-persons-api:v1.0.5
+history | grep kubectl
+kubectl get pods
+kubectl delete pod udaconnect-persons-api-75465d46f9-bkzp9
+kubectl get pods
+kubectl exec -it udaconnect-persons-api-75465d46f9-xbrq6 /bin/sh 
+ls
+kubectl get pods
+kubectl exec -it udaconnect-app-66c759ccfc-2dv7n /bin/sh 
+kubectl get pods
+kubectl delete pod udaconnect-persons-api-75465d46f9-xbrq6
+kubectl get pods
+kubectl logs udaconnect-persons-api-75465d46f9-s2lm6
+kubectl get pods
+cd ka
+cd deployment/
+ls
+cd kafka/
+ls
+kubectl apply -f kafka.yaml
+cd ../../
+ls
+kubectl get pods
+kubectl logs udaconnect-persons-api-75465d46f9-s2lm6
+kubectl get pods
+kubectl logs udaconnect-persons-api-75465d46f9-s2lm6
+kubectl get pods
+kubectl logs udaconnect-persons-api-75465d46f9-s2lm6
+vagrant destroy
+ls
+cd docs/
+ls
+vim grpc.txt
+ls
+vim grpc.txt
+cd ../
+ls
+git status
+git add *
